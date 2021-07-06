@@ -12,7 +12,8 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "debug": "node --nolazy node_modules/.bin/gatsby develop --inspect-brk"
   },
   "dependencies": {
     "gatsby": "^3.6.2",
