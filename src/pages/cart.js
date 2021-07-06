@@ -6,7 +6,7 @@ import CartProductCard from '../components/products/CartProductCard';
 import CartTotal from '../components/products/CartTotal';
 
 const CartPage = () => {
-  const {cartDetails, totalPrice} = useShoppingCart()
+  const {cartDetails} = useShoppingCart()
   const cart = () => {
     return Object.entries(cartDetails).map((p,i) => <CartProductCard key={i} product={p[1]}/>)
   }
