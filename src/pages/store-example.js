@@ -16,12 +16,6 @@ const IndexPage = () => {
         nodes {
           product {
             name
-            images
-            description
-            metadata {
-              level
-              color
-            }
           }
           unit_amount
           id
@@ -35,7 +29,7 @@ const IndexPage = () => {
 
   useEffect(() => {
     clearCart()
-  })
+  }, [])
   return (
     <div>
       {data.allStripePrice.nodes.map(p => (

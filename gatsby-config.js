@@ -25,7 +25,7 @@ module.exports = {
         successUrl: "https://www.google.com", // url must start with http or https
         cancelUrl: "https://www.stripe.com", // url must start with http or https
         currency: "USD",
-        allowedCountries: ["US", "GB", "CA"],
+        allowedCountries: ["US"],
         billingAddressCollection: true,
       },
     },
