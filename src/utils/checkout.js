@@ -5,7 +5,7 @@ const cart = (cartDetails) => {
     {
       price: p[0], 
       quantity: p[1].quantity,
-      tax_rates: ['txr_1J8Cw8Iw7CyPxjdbX0gI2ddb']
+      // tax_rates: ['txr_1J8Cw8Iw7CyPxjdbX0gI2ddb']
     }
   ))
 }
