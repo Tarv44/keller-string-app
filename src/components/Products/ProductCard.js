@@ -3,23 +3,24 @@ import formatPrice from '../../utils/price-format';
 import {useShoppingCart} from 'use-shopping-cart';
 
 
-const ProductCard = ({price}) => {
+const ProductCard = ({product}) => {
   const {addItem} = useShoppingCart()
-  const {id, currency, unit_amount} = price
+  const currency = 'USD'
+  const price = product.price * 100
+  const {id, title, images} = product
   const cartData = {
     id,
     currency,
-    price: unit_amount,
-    name: price.product.name,
-    product_data: price.product.metadata
+    price,
+    name: title,
+    image: images[0].file.url
   }
-
-  console.log(cartData.product_data)
 
   return (
     <div>
-      <h2>{price.product.name}</h2>
-      <p>{formatPrice(price.unit_amount, price.currency)}</p>
+      <h2>{title}</h2>
+      <p>{formatPrice(price, currency)}</p>
+      <img src={images[0].file.url} />
       <button onClick={() => addItem(cartData)}>Add To Cart</button>
     </div>
   )

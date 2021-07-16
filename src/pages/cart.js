@@ -7,6 +7,7 @@ import CartTotal from '../components/products/CartTotal';
 
 const CartPage = () => {
   const {cartDetails} = useShoppingCart()
+  console.log(cartDetails)
   const cart = () => {
     return Object.entries(cartDetails).map((p,i) => <CartProductCard key={i} product={p[1]}/>)
   }

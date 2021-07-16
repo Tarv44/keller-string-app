@@ -3,8 +3,10 @@ import getStripe from './stripe';
 const cart = (cartDetails) => {
   return Object.entries(cartDetails).map(p => (
     {
-      price: p[0], 
-      quantity: p[1].quantity,
+      name: p[1].name, 
+      image: p[1].image,
+      unit_amount: p[1].price,
+      quantity: p[1].quantity
       // tax_rates: ['txr_1J8Cw8Iw7CyPxjdbX0gI2ddb']
     }
   ))
@@ -24,6 +26,7 @@ const redirectToCheckout = async (e, items) => {
       return res.json()
     })
     .then(session => {
+      // console.log(session)
       stripe.redirectToCheckout({sessionId: session.id})
     })
 }

@@ -11,18 +11,21 @@ import {Link} from 'gatsby';
 // markup
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
-    query productsQuery {
-      allStripePrice(filter: {active: {ne: false}}) {
+    query MyQuery {
+      allContentfulProduct {
         nodes {
-          product {
-            name
-          }
-          unit_amount
+          title
+          price
+          slug
           id
-          currency
+          images {
+            file {
+              url
+            }
+          }
         }
       }
-    }
+    }  
   `)
 
   const {cartCount, clearCart} = useShoppingCart()
@@ -32,8 +35,8 @@ const IndexPage = () => {
   }, [])
   return (
     <div>
-      {data.allStripePrice.nodes.map(p => (
-        <ProductCard key={`product-${p.id}`} price={p} />
+      {data.allContentfulProduct.nodes.map(p => (
+        <ProductCard key={`product-${p.id}`} product={p} />
       ))}
       <p>Cart count: {cartCount}</p>
       <Link to='/cart'>View Cart</Link>
