@@ -1,0 +1,23 @@
+.alertBar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 27.5px 0;
+  background: var(--color-red);
+  color: white;
+}
+
+.alertBar p {
+  display: inline-block;
+  margin: 0;
+}
+
+.alertBar svg {
+  position: absolute;
+  right: 65px;
+}
+
+.alertBar svg:hover {
+  cursor: pointer;
+}

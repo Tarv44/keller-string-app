@@ -1,42 +1,34 @@
-import  React from 'react';
+import  React, {useState} from 'react';
 import { useStaticQuery, graphql } from "gatsby";
-import Img from "gatsby-image";
+import ReactMarkdown from 'react-markdown'
+// import {GrClose} from 'react-icons/gr';
+// import { IconContext } from 'react-icons';
+import CloseIcon from '@material-ui/icons/Close';
+import * as styles from './AlertBar.module.css';
 
 
-const Banner = () => {
+const AlertBar = () => {
+  let params = new URLSearchParams(document.location.search.substring(1));
+  let sessionId = params.get("session_id"); // is the string "Jonathan"
+  console.log(sessionId); // is the number 18
+  const [closed, setClosed] = useState(false)
   // const data = useStaticQuery(graphql`
-  //   query MyQuery {
-  //     allContentfulProduct {
-  //       nodes {
-  //         images {
-  //           file {
-  //             url
-  //           }
-  //           title
-  //           description
-  //           fluid {
-  //             ...GatsbyContentfulFluid
-  //           }
-  //         }
+  //   query AlertQuery {
+  //     contentfulBanner {
+  //       message {
+  //         message
   //       }
   //     }
   //   }
   // `)
 
-  // console.log(data)
+  // const message = data.contentfulBanner.message.message
   return (
-    <div>
-      {/* <img src={data.allContentfulProduct.nodes[1].images[0].fluid.src} />
-      <Img 
-        style={{width: '400px'}}
-        fluid={data.allContentfulProduct.nodes[1].images[0].fluid} 
-        key={data.allContentfulProduct.nodes[1].images[0].fluid.src}
-        alt={data.allContentfulProduct.nodes[1].images[0].title}
-      /> */}
-      {/* <h2>{data.contentfulBanner.message}</h2> */}
-      <h2>All good</h2>
+    <div className={styles.alertBar} style={closed ? {display: 'none'} : null}>
+      {/* <ReactMarkdown>{message}</ReactMarkdown> */}
+      <CloseIcon onClick={() => setClosed(true)} />
     </div>
   )
 }
 
-export default Banner;
+export default AlertBar;

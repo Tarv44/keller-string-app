@@ -11,8 +11,8 @@ import {Link} from 'gatsby';
 // markup
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
-    query MyQuery {
-      allContentfulProduct {
+    query ShopQuery {
+      allContentfulProduct(filter: {node_locale: {eq: "en-US"}}) {
         nodes {
           title
           price

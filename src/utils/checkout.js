@@ -12,22 +12,37 @@ const cart = (cartDetails) => {
   ))
 }
 
-const redirectToCheckout = async (e, items) => {
+const redirectToCheckout = async (e, items, pickingUp) => {
   e.preventDefault()
   const stripe = await getStripe()
   const options = {
     method: 'POST',
     headers: {'content-type': 'application/json'},
-    body: JSON.stringify({products: cart(items)})
+    body: JSON.stringify({products: cart(items), pickingUp})
   }
 
-  fetch('http://localhost:5432/create-checkout-session', options)
+  fetch('http://localhost:8080/api/stripe/sessions', options)
     .then(res => {
       return res.json()
     })
     .then(session => {
       // console.log(session)
       stripe.redirectToCheckout({sessionId: session.id})
+    })
+}
+
+export const getSuccessData = async (session_id) => {
+  const options = {
+    method: 'GET',
+    headers: {'content-type': 'application/json'},
+  }
+
+  return fetch(`http://localhost:8080/api/stripe/sessions/${session_id}`, options)
+    .then(res => {
+      return res.json()
+    })
+    .then(data => {
+      return data
     })
 }
 

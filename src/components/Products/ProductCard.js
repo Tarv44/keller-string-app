@@ -20,7 +20,7 @@ const ProductCard = ({product}) => {
   return (
     <div>
       <h2>{title}</h2>
-      <p>{formatPrice(price, currency)}</p>
+      <p>{formatPrice(price)}</p>
       <img src={images[0]} />
       <button onClick={() => addItem(cartData)}>Add To Cart</button>
     </div>
