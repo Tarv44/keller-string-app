@@ -5,7 +5,6 @@ import CloseIcon from '@material-ui/icons/Close';
 import * as styles from './AlertBar.module.css';
 import ScreenContext from '../../contexts/screenContext';
 
-
 const AlertBar = () => {
   const {isMobile} = useContext(ScreenContext)
   const [closed, setClosed] = useState(false)
@@ -21,7 +20,6 @@ const AlertBar = () => {
       }
     }
   `)
-
   const message = isMobile ? data.contentfulBanner.mobile.mobile : data.contentfulBanner.desktop.desktop
   return (
     <div className={styles.alertBar} style={closed ? {display: 'none'} : null}>
