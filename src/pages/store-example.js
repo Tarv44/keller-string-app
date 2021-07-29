@@ -2,7 +2,7 @@ import React from "react";
 // import ProductCard from '../components/ProductCard/ProductCard';
 // import { useStaticQuery, graphql } from "gatsby";
 import { useShoppingCart } from "use-shopping-cart";
-import Layout from "../components/Layout/Layout";
+import Layout from "../components/Layout";
 import {Link} from 'gatsby';
 // styles
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import NumInput from '../NumInput';
+import NumInput from './NumInput';
 import { useShoppingCart } from "use-shopping-cart";
 
 const CartProductCard = ({product}) => {

@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
-import Layout from '../components/Layout/Layout';
+import Layout from '../components/Layout';
 import { useShoppingCart } from "use-shopping-cart";
 import redirectToCheckout from '../utils/checkout';
-import CartProductCard from '../components/CartProductCard/CartProductCard';
-import CartTotal from '../components/CartTotal/CartTotal';
+import CartProductCard from '../components/CartProductCard';
+import CartTotal from '../components/CartTotal';
 
 const CartPage = () => {
   const {cartDetails} = useShoppingCart()
