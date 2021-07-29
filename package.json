@@ -16,6 +16,7 @@
     "debug": "node --nolazy node_modules/.bin/gatsby develop --inspect-brk"
   },
   "dependencies": {
+    "@material-ui/core": "^4.12.2",
     "@material-ui/icons": "^4.11.2",
     "gatsby": "^3.6.2",
     "gatsby-image": "^3.7.1",
