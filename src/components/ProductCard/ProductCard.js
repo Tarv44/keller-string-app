@@ -21,7 +21,7 @@ const ProductCard = ({product}) => {
     <div>
       <h2>{title}</h2>
       <p>{formatPrice(price)}</p>
-      <img src={images[0]} />
+      <img src={images[0]} alt={title}/>
       <button onClick={() => addItem(cartData)}>Add To Cart</button>
     </div>
   )

@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import Layout from '../components/Layout';
+import Layout from '../components/Layout/Layout';
 import { getSuccessData } from '../utils/checkout';
 import formatPrice from '../utils/price-format';
 
@@ -7,12 +7,15 @@ const Success = (props) => {
   const [data, setData] = useState(null)
   let [lineItems, setLineItems] = useState(null)
   
-  useEffect(async () => {
-    const params = new URLSearchParams(props.location.search);
-    const session_id = params.get("session_id");
-    const response = await getSuccessData(session_id);
-    setData(response)
-  }, []);
+  useEffect(() => {
+    const fetch = async () => {
+      const params = new URLSearchParams(props.location.search);
+      const session_id = params.get("session_id");
+      const response = await getSuccessData(session_id);
+      setData(response)
+    }
+    fetch()
+  }, [props.location.search]);
 
   useEffect(() => {
     const lis = data?.lineItems.data.map((l, i) => {
