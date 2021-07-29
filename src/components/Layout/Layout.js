@@ -1,5 +1,5 @@
-import React from 'react';
-import Header from '../Header/Header';
+import React, {lazy} from 'react';
+const Header = lazy(() => import('../Header/Header'));
 import './Layout.css';
 
 const Layout = ({children}) => {

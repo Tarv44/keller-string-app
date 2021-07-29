@@ -1,5 +1,5 @@
-import React from 'react';
-import AlertBar from '../AlertBar/AlertBar';
+import React, {lazy} from 'react';
+const AlertBar = lazy(() => import('../AlertBar/AlertBar'));
 // import * as styles from './Header.module.css';
 
 const Header = () => {
