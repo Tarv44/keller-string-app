@@ -15,4 +15,9 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     max-width: 100vw;
   }
+
+  button {
+    border: none;
+    background: white;
+  }
 `

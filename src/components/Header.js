@@ -1,11 +1,12 @@
 import React from 'react';
 import AlertBar from './AlertBar';
-// import * as styles from './Header.module.css';
+import MenuBar from './MenuBar';
 
 const Header = () => {
   return (
     <header>
       <AlertBar />
+      <MenuBar />
     </header>
   )
 }

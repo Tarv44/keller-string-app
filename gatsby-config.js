@@ -7,6 +7,10 @@ module.exports = {
     title: "Keller Strings",
   },
   plugins: [
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    "gatsby-plugin-gatsby-cloud",
+    "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-source-contentful",
       options: {
@@ -14,8 +18,6 @@ module.exports = {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
       },
     },
-    "gatsby-plugin-gatsby-cloud",
-    "gatsby-plugin-react-helmet",
     {
       resolve: `gatsby-plugin-use-shopping-cart`,
       options: {

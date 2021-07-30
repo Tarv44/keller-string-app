@@ -26,7 +26,6 @@ const ScreenProvider = (props) => {
   useEffect(() => {
     updateDeviceSize();
     window.addEventListener('resize', updateDeviceSize)
-    console.log(window.innerWidth)
     return window.removeEventListener('resize', updateDeviceSize)
   }, [])
 
