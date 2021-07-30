@@ -1,11 +1,12 @@
-import  React, {useState} from 'react';
+import  React, {useContext} from 'react';
 import { useStaticQuery, graphql } from "gatsby";
-import ReactMarkdown from 'react-markdown'
-import {CgClose} from 'react-icons/cg'
+import ReactMarkdown from 'react-markdown';
+import {CgClose} from 'react-icons/cg';
 import styled from 'styled-components';
+import AlertContext from '../contexts/alertContext';
 
 const AlertBar = () => {
-  const [closed, setClosed] = useState(false)
+  const {isClosed, setIsClosed} = useContext(AlertContext)
   const data = useStaticQuery(graphql`
     query AlertQuery {
       contentfulBanner {
@@ -21,11 +22,11 @@ const AlertBar = () => {
   const mobile = data.contentfulBanner.mobile.mobile 
   const desktop = data.contentfulBanner.desktop.desktop
   return (
-    <Bar closed={closed}>
+    <Bar closed={isClosed}>
       <MobileMessage>{mobile}</MobileMessage>
       <DesktopMessage>{desktop}</DesktopMessage>
-      <MobileIcon onClick={() => setClosed(true)} size={10}/>
-      <DesktopIcon onClick={() => setClosed(true)} size={14}/>
+      <MobileIcon onClick={() => setIsClosed(true)} size={10}/>
+      <DesktopIcon onClick={() => setIsClosed(true)} size={14}/>
     </Bar>
   )
 }
@@ -40,7 +41,7 @@ const Bar = styled.div`
   align-items: center;
   justify-content: center;
   padding: 10px 4.8%;
-  background: var(--color-red);
+  background: var(--color-primary);
   color: white;
   position: relative;
   
@@ -58,6 +59,7 @@ const MobileMessage = styled(ReactMarkdown)`
 
   p {
     font-size: 12px;
+    color: #ffffff;
   }
   @media (min-width: 481px) {
     display: none;
@@ -73,6 +75,7 @@ const DesktopMessage = styled(ReactMarkdown)`
 
   p {
     font-size: 12px;
+    color: #ffffff;
   }
   @media (min-width: 481px) {
     display: block;

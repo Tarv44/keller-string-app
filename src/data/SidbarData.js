@@ -1,9 +1,10 @@
 import React from 'react';
+import SubmenuSidebarShop from '../components/SubmenuSidebarShop';
 
 const SidebarData = [
   {
     label: `Shop`,
-    comp: <div></div>
+    comp: <SubmenuSidebarShop />
   },
   {
     label: `Rentals`,

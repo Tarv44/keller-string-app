@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'gatsby';
 import Logo from '../images/logo.png';
 import Hamburger from '../images/hamburger.png';
@@ -6,15 +6,11 @@ import Close from '../images/close.png';
 import Cart from '../images/cart.png';
 import Heart from '../images/heart.png';
 import Account from '../images/account.png';
-import MenuSidebar from './MenuSidebar';
 import styled from 'styled-components';
 
 const MenuBar = (props) => {
   return (
     <Bar>
-      {/* <MenuSidebar 
-        isOpen={isOpen} 
-      /> */}
       <MenuButton>
         <button onClick={() => props.setSidebarOpen(!props.sidebarOpen)}>
           {!props.sidebarOpen && <img width={22} src={Hamburger} alt="Menu Icon" />}
@@ -34,7 +30,7 @@ const MenuBar = (props) => {
         <Link>
           <HeartIcon src={Heart} alt="Favorite Icon" />
         </Link>
-        <Link>
+        <Link to={'/cart'}>
           <CartIcon src={Cart} alt="Cart Icon" />
         </Link>
       </Icons>
@@ -50,6 +46,8 @@ const Bar = styled.div`
   align-items: center;
   padding: 8px 20px 11px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 99;
 
   @media (min-width: 481px) {
     padding: 8px 25px 9.5px;

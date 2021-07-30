@@ -1,5 +1,8 @@
-import React from "react"
-import { ScreenProvider } from "./src/contexts/screenContext"
+import React from "react";
+import { AlertProvider } from "./src/contexts/alertContext";
+import "@fontsource/libre-franklin/700.css";
+import "@fontsource/libre-franklin/500.css";
+import "@fontsource/libre-franklin/400.css";
 export const wrapRootElement = ({ element }) => (
-  <ScreenProvider>{element}</ScreenProvider>
+  <AlertProvider>{element}</AlertProvider>
 )

@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import data from '../data/SidbarData';
+import SubmenuSidebar from './SubmenuSidebar';
 import {AiFillCaretRight} from 'react-icons/ai';
 
 const MenuSidebar = (props) => {
   const [selected, setSelected] = useState(null)
   const tabs = data.map((t, i) => {
     return (
-      <Tab>
+      <Tab onClick={() => setSelected(t)}>
         <span>{t.label}</span>
         <AiFillCaretRight size={16} />
       </Tab>
@@ -15,7 +16,13 @@ const MenuSidebar = (props) => {
   })
   return (
     <Sidebar sidebarOpen={props.sidebarOpen} >
-      {tabs}
+      {!selected && tabs}
+      {!!selected && (
+        <SubmenuSidebar 
+          selected={selected} 
+          setSelected={setSelected}
+        /> 
+      )}
     </Sidebar>
   );
 };
@@ -26,12 +33,17 @@ const Sidebar = styled.div`
   display: ${props => props.sidebarOpen ? 'flex' : 'none'};
   flex-direction: column;
   position: absolute;
-  z-index: -1;
-  background: var(--color-bg-grey);
+  z-index: 98;
+  background: var(--color-grey-1);
   width: 363px;
-  height: 100vh;
+  height: calc(100vh - 94.28px);
   padding: 9px 18px 0 20px;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 `
+
 
 const Tab = styled.button`
   text-align: left;
@@ -49,6 +61,6 @@ const Tab = styled.button`
   }
 
   path {
-    color: var(--color-red);
+    color: var(--color-primary);
   }
 `

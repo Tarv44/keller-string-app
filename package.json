@@ -16,6 +16,7 @@
     "debug": "node --nolazy node_modules/.bin/gatsby develop --inspect-brk"
   },
   "dependencies": {
+    "@fontsource/libre-franklin": "^4.5.0",
     "gatsby": "^3.6.2",
     "gatsby-image": "^3.7.1",
     "gatsby-plugin-gatsby-cloud": "^2.7.1",
