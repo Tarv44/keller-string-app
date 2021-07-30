@@ -8,7 +8,9 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   html {
+    --color-bg-grey: #F1F3F4;
     --color-red: #860D0B;
+    --color-black: #020300;
   }
 
   body {
@@ -18,6 +20,21 @@ export const GlobalStyle = createGlobalStyle`
 
   button {
     border: none;
-    background: white;
+    background: none;
+  }
+
+  h1 {
+    font-family: 'Perpetua';
+    font-size: 54px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(---color-red);
+  }
+
+  p {
+    font-family: 'Libre Franklin';
+    font-size: 20px;
+    font-weight: medium;
+    color: var(---color-black)
   }
 `

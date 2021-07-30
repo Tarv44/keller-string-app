@@ -6,16 +6,20 @@ import Close from '../images/close.png';
 import Cart from '../images/cart.png';
 import Heart from '../images/heart.png';
 import Account from '../images/account.png';
+import MenuSidebar from './MenuSidebar';
 import styled from 'styled-components';
 
 const MenuBar = (props) => {
-  const [isOpen, setIsOpen] = useState(false)
   return (
     <Bar>
-      {/* <div>Mobile Menu</div> */}
-      <MenuButton onClick={() => setIsOpen(!isOpen)}>
-        {!isOpen && <img width={22} src={Hamburger} alt="Menu Icon" />}
-        {isOpen && <img width={18} src={Close} alt="Close Menu Icon" />}
+      {/* <MenuSidebar 
+        isOpen={isOpen} 
+      /> */}
+      <MenuButton>
+        <button onClick={() => props.setSidebarOpen(!props.sidebarOpen)}>
+          {!props.sidebarOpen && <img width={22} src={Hamburger} alt="Menu Icon" />}
+          {props.sidebarOpen && <img width={18} src={Close} alt="Close Menu Icon" />}
+        </button>
       </MenuButton>
       <Link>
         <LogoImg width={50} src={Logo} alt="Keller Strings Logo"/>
@@ -56,7 +60,7 @@ const Bar = styled.div`
   }
 `
 
-const MenuButton = styled.button`
+const MenuButton = styled.div`
   display: flex;
   justify-content: flex-start;
   height: 18px;
