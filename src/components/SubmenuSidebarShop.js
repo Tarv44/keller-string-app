@@ -30,10 +30,10 @@ const SubmenuSidebarShop = (props) => {
               <Link>Gifts</Link>
             </li>
           </InvItems>
-          <p>Learn more about the <a>product lines</a> we offer. </p>
+          <p>Learn more about the <a href='www.google.com' target='_blank' rel='noreferrer' >product lines</a> we offer. </p>
         </div>
       </Inventory>
-      <CTA>
+      <Cta>
         <h3>Don’t Miss Out on This</h3>
         <div>
           <ul>
@@ -49,7 +49,7 @@ const SubmenuSidebarShop = (props) => {
           </ul>
         </div>
         <Btn as={Link} to={'/cart'}>Schedule a Visit</Btn>
-      </CTA>
+      </Cta>
     </>
   );
 };
@@ -81,7 +81,7 @@ const InvItems = styled.ul`
   @media (min-width: 1200px) {}
 `
 
-const CTA = styled.div`
+const Cta = styled.div`
   li {
     margin: 0 0 15px;
   }

@@ -4,23 +4,28 @@ import SubmenuSidebarShop from '../components/SubmenuSidebarShop';
 const SidebarData = [
   {
     label: `Shop`,
-    comp: <SubmenuSidebarShop />
+    sidebar: <SubmenuSidebarShop />,
+    dropdown: <div></div>
   },
   {
     label: `Rentals`,
-    comp: <div></div>
+    sidebar: <div></div>,
+    dropdown: <div></div>
   },
   {
     label: `Services`,
-    comp: <div></div>
+    sidebar: <div></div>,
+    dropdown: <div></div>
   },
   {
     label: `Resources`,
-    comp: <div></div>
+    sidebar: <div></div>,
+    dropdown: <div></div>
   },
   {
     label: `About`,
-    comp: <div></div>
+    sidebar: <div></div>,
+    dropdown: <div></div>
   },
 ]
 

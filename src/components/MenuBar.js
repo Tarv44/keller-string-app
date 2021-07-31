@@ -7,6 +7,7 @@ import Cart from '../images/cart.png';
 import Heart from '../images/heart.png';
 import Account from '../images/account.png';
 import styled from 'styled-components';
+import MenuDropdownTabs from './MenuDropdownTabs';
 
 const MenuBar = (props) => {
   return (
@@ -17,12 +18,10 @@ const MenuBar = (props) => {
           {props.sidebarOpen && <img width={18} src={Close} alt="Close Menu Icon" />}
         </button>
       </MenuButton>
-      <Link>
+      <Link to='/'>
         <LogoImg width={50} src={Logo} alt="Keller Strings Logo"/>
       </Link>
-      {/* <div>
-        Dropdowns
-      </div> */}
+      <MenuDropdownTabs selected={props.selectedDropdown} setSelected={props.setSelectedDropdown} />
       <Icons>
         <Link>
           <AccountIcon src={Account} alt="Account Icon" />
@@ -43,40 +42,52 @@ export default MenuBar;
 const Bar = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 8px 20px 11px;
+  align-items: stretch;
+  padding: 0 20px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   position: relative;
   z-index: 99;
 
   @media (min-width: 481px) {
-    padding: 8px 25px 9.5px;
+    padding: 0 25px;
   }
-
-  @media (min-width: 768px) {
-    padding: 12px 70px 17px;
+  @media (min-width: 1025px) {
+    padding: 0 45px;
+  }
+  @media (min-width: 1200px) {
+    padding: 0 70px;
   }
 `
 
 const MenuButton = styled.div`
   display: flex;
   justify-content: flex-start;
-  height: 18px;
+  align-items: center;
   width: 82px;
 
   @media (min-width: 768px) {
+    width: 104px;
+  }
+  @media (min-width: 1025px) {
     display: none;
   }
 `
 const LogoImg = styled.img`
   width: 50px;
+  padding: 8px 0 11px;
 
   @media (min-width: 481px) {
     width: 70px;
+    padding: 8px 0 9.5px;
+  }
+  @media (min-width: 768px) {
+    width: 90px;
+    padding: 10px 0 13px;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 1025px) {
     width: 110px;
+    padding: 12px 0 17px;
   }
 `
 const Icons = styled.div`

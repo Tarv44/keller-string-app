@@ -44,11 +44,15 @@ const Bar = styled.div`
   background: var(--color-primary);
   color: white;
   position: relative;
-  
 
   @media (min-width: 481px) {
+    padding: 13px 12px;
+  }
+  @media (min-width: 506px) {
     padding: 13px 4.8%;
-  } 
+  }
+  
+  
 `
 
 const MobileMessage = styled(ReactMarkdown)`
@@ -68,6 +72,8 @@ const MobileMessage = styled(ReactMarkdown)`
     }
   }
 `
+
+
 const DesktopMessage = styled(ReactMarkdown)`
   display: none;
   position: absolute;

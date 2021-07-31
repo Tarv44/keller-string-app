@@ -10,7 +10,7 @@ const SubmenuSidebar = ({selected, setSelected}) => {
         <span>{selected.label}</span>
       </BackTab>
       <Items>
-        {selected.comp}
+        {selected.sidebar}
       </Items>
       <Back onClick={() => setSelected(null)}>
         <AiFillCaretLeft size={16} />
