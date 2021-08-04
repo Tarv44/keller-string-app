@@ -1,11 +1,12 @@
 import React from 'react';
 import SubmenuSidebarShop from '../components/SubmenuSidebarShop';
+import SubmenuDropdownShop from '../components/SubmenuDropdownShop';
 
 const SidebarData = [
   {
     label: `Shop`,
     sidebar: <SubmenuSidebarShop />,
-    dropdown: <div></div>
+    dropdown: <SubmenuDropdownShop />
   },
   {
     label: `Rentals`,

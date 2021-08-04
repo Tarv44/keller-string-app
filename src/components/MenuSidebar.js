@@ -38,10 +38,13 @@ const Sidebar = styled.div`
   width: 363px;
   height: calc(100vh - 94.28px);
   padding: 9px 18px 0 20px;
+  top: 100%;
 
   @media (min-width: 481px) {
     height: calc(100vh - 119.3px);
   }
+
+  @media (min-width: 768px) {}
 
   @media (min-width: 1025px) {
     display: none;

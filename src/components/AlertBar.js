@@ -26,7 +26,8 @@ const AlertBar = () => {
       <MobileMessage>{mobile}</MobileMessage>
       <DesktopMessage>{desktop}</DesktopMessage>
       <MobileIcon onClick={() => setIsClosed(true)} size={10}/>
-      <DesktopIcon onClick={() => setIsClosed(true)} size={14}/>
+      <DesktopIcon onClick={() => setIsClosed(true)} size={16}/>
+      <LargeIcon onClick={() => setIsClosed(true)} size={20}/>
     </Bar>
   )
 }
@@ -46,14 +47,16 @@ const Bar = styled.div`
   position: relative;
 
   @media (min-width: 481px) {
-    padding: 13px 12px;
+    padding: 13px 8px;
   }
-  @media (min-width: 506px) {
+  @media (min-width: 520px) {
     padding: 13px 4.8%;
   }
-  
-  
+  @media (min-width: 768px) {
+    padding: 27px 4.8%;
+  }
 `
+
 
 const MobileMessage = styled(ReactMarkdown)`
   display: block;
@@ -67,9 +70,6 @@ const MobileMessage = styled(ReactMarkdown)`
   }
   @media (min-width: 481px) {
     display: none;
-    p {
-      font-size: 16px;
-    }
   }
 `
 
@@ -80,14 +80,15 @@ const DesktopMessage = styled(ReactMarkdown)`
   left: center;
 
   p {
-    font-size: 12px;
+    font-size: 16px;
     color: #ffffff;
   }
   @media (min-width: 481px) {
     display: block;
-
+  }
+  @media (min-width: 768px) {
     p {
-      font-size: 16px;
+      font-size: 20px;
     }
   }
 `
@@ -110,5 +111,20 @@ const DesktopIcon = styled(CgClose)`
   @media (min-width: 481px) {
     display: block;
   }
+  @media (min-width: 768px) {
+    display: none;
+  }
+`
+
+const LargeIcon = styled(CgClose)`
+  align-self: flex-end;
+  cursor: pointer;
+  display: none;
+  @media (min-width: 481px) {}
+  @media (min-width: 768px) {
+    display: block;
+  }
+  @media (min-width: 1025px) {}
+  @media (min-width: 1200px) {}
 `
 

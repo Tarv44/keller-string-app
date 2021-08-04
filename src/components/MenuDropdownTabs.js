@@ -41,7 +41,7 @@ const Tabs = styled.div`
 `
 
 
-const Tab = styled.div`
+const Tab = styled.button`
   text-align: left;
   text-transform: uppercase;
   text-decoration: ${props => props.isSelected && 'underline'};
@@ -62,4 +62,16 @@ const Tab = styled.div`
   path {
     color: var(--color-primary);
   }
+
+  @media (min-width: 1200px) {
+    font-size: ${props => props.isSelected ? '23px' : '24px'};
+    padding: 0 21px;
+  } 
+
+  @media (min-width: 1440px) {
+    font-size: ${props => props.isSelected ? '27px' : '28px'};
+    padding: 0 26px;
+  }
 `
+
+

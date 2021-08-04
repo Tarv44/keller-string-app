@@ -21,7 +21,10 @@ const MenuBar = (props) => {
       <Link to='/'>
         <LogoImg width={50} src={Logo} alt="Keller Strings Logo"/>
       </Link>
-      <MenuDropdownTabs selected={props.selectedDropdown} setSelected={props.setSelectedDropdown} />
+      <MenuDropdownTabs 
+        selected={props.selectedDropdown} 
+        setSelected={props.setSelectedDropdown} 
+      />
       <Icons>
         <Link>
           <AccountIcon src={Account} alt="Account Icon" />
