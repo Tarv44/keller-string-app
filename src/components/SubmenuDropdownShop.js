@@ -112,7 +112,7 @@ const Cta = styled.div`
 
 const Btn = styled(Button)`
   padding: 6px 20px;
-  font-size: 24px;
+  width: 100%;
   @media (min-width: 481px) {}
   @media (min-width: 768px) {}
   @media (min-width: 1025px) {}

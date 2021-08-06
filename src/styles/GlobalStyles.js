@@ -1,4 +1,6 @@
 import { createGlobalStyle } from "styled-components";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -34,8 +36,8 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   h1 {
-    font-family: 'Perpetua';
-    font-size: 54px;
+    font-family: 'Pepetua', serif;
+    font-size: 32px;
     font-weight: 700;
     text-transform: uppercase;
     color: var(--color-primary);
@@ -56,7 +58,7 @@ export const GlobalStyle = createGlobalStyle`
 
   p, li {
     font-family: 'Libre Franklin';
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 400;
     color: var(--color-black)
   }
@@ -64,4 +66,59 @@ export const GlobalStyle = createGlobalStyle`
   ul, ol {
     list-style: none;
   }
+
+  .slick-dots {
+    bottom: -30px;
+  }
+
+  .slick-dots li {
+    width: 2px;
+  }
+
+  .slick-dots li button:before {
+    font-size: 8px;
+    opacity: 7%;
+  }
+
+  .slick-dots li.slick-active button:before {
+    opacity: 25%;
+    /* color: black; */
+  }
+
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 45px;
+    }
+
+    p {
+      font-size: 20px;
+    }
+
+    .slick-dots li button:before {
+      font-size: 11px;
+    }
+    .slick-dots li {
+      width: 7px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    h1 {
+      font-size: 54px;
+    }
+
+    .slick-dots {
+      bottom: -45px;
+    }
+
+    .slick-dots li button:before {
+      font-size: 18px;
+    }
+    .slick-dots li {
+      width: 15px;
+    }
+  }
 `
+
+
+

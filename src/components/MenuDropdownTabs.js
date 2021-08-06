@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import data from '../data/MenuData';
 import {AiFillCaretDown, AiFillCaretUp} from 'react-icons/ai';

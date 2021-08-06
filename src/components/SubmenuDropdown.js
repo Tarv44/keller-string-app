@@ -19,6 +19,7 @@ const Submenu = styled.div`
   background: var(--color-grey-1);
   display: none;
   padding: 35px 50px;
+  z-index: 98;
   @media (min-width: 481px) {}
   @media (min-width: 768px) {}
   @media (min-width: 1025px) {
