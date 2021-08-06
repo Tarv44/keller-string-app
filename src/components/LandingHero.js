@@ -42,12 +42,16 @@ const Hero = styled.div`
   max-width: 100%;
   position: relative;
   top: -5px;
+  margin-bottom: 36px;
   @media (min-width: 481px) {}
   @media (min-width: 768px) {
     padding-top: 25px;
+    margin-bottom: 70px;
   }
   @media (min-width: 1025px) {}
-  @media (min-width: 1200px) {}
+  @media (min-width: 1200px) {
+    margin-bottom: 100px;
+  }
 `
 
 const Card = styled.div`

@@ -45,7 +45,7 @@ export const GlobalStyle = createGlobalStyle`
 
   h2 {
     font-family: 'Perpetua';
-    font-size: 42px;
+    font-size: 26px;
     font-weight: 700;
     color: var(--color-black);
   }
@@ -54,6 +54,13 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Libre Franklin';
     font-size: 28px;
     font-weight: 500;
+  }
+
+  h4 {
+    font-family: 'Perpetua';
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-black);
   }
 
   p, li {
@@ -67,8 +74,12 @@ export const GlobalStyle = createGlobalStyle`
     list-style: none;
   }
 
+  .slick-list {
+    margin-bottom: 15px;
+  }
+  
   .slick-dots {
-    bottom: -30px;
+    position: static;
   }
 
   .slick-dots li {
@@ -82,12 +93,15 @@ export const GlobalStyle = createGlobalStyle`
 
   .slick-dots li.slick-active button:before {
     opacity: 25%;
-    /* color: black; */
   }
 
   @media (min-width: 768px) {
     h1 {
       font-size: 45px;
+    }
+
+    h2 {
+      font-size: 32px;
     }
 
     p {
@@ -107,8 +121,15 @@ export const GlobalStyle = createGlobalStyle`
       font-size: 54px;
     }
 
-    .slick-dots {
-      bottom: -45px;
+    h2 {
+      font-size: 42px;
+    }
+    h4 {
+      font-size: 35px;
+    }
+
+    slick-list {
+      margin-bottom: 25px;
     }
 
     .slick-dots li button:before {

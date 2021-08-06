@@ -1,11 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import LandingHero from './LandingHero';
+import LandingServices from './LandingServices';
 
 const Landing = (props) => {
   return (
     <LandingContainer>
       <LandingHero />
+      <LandingServices />
     </LandingContainer>
   );
 };
