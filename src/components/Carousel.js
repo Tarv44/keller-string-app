@@ -1,7 +1,43 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Slider from 'react-slick';
+import Left from '../images/arrow-left.png';
+import Left2x from '../images/arrow-left@2x.png';
+import Left3x from '../images/arrow-left@3x.png';
+import Right from '../images/arrow-right.png';
+import Right2x from '../images/arrow-right@2x.png';
+import Right3x from '../images/arrow-right@3x.png';
 import {AiFillCaretRight, AiFillCaretLeft} from 'react-icons/ai';
+
+const PrevArrow = (props) => {
+  if (props.redArrow) {
+    return (
+      <img 
+        style={{marginRight: 30}}
+        onClick={props.onClick} 
+        width={18} 
+        height={19.8} 
+        src={Left} 
+        srcSet={`${Left} 1x, ${Left2x} 2x, ${Left3x} 3x`} 
+        alt="Left arrow"/>
+    )
+  }
+}
+
+const NextArrow = (props) => {
+  if (props.redArrow) {
+    return (
+      <img 
+      style={{marginLeft: 30}}
+        onClick={props.onClick} 
+        width={18} 
+        height={19.8} 
+        src={Right} 
+        srcSet={`${Right} 1x, ${Right2x} 2x, ${Right3x} 3x`} 
+        alt="Right arrow"/>
+    )
+  }
+}
 
 class Carousel extends Component {
   constructor(props) {
@@ -9,13 +45,13 @@ class Carousel extends Component {
     this.next = this.next.bind(this);
     this.previous = this.previous.bind(this);
   }
+
   next() {
     this.slider.slickNext();
   }
   previous() {
     this.slider.slickPrev();
   }
-  
 
   render() {
     const settings = {
@@ -26,6 +62,8 @@ class Carousel extends Component {
       slidesToScroll: 1,
       autoplay: this.props.autoplay,
       autoplaySpeed: 3000,
+      prevArrow: <PrevArrow redArrow={this.props.redArrow}/>,
+      nextArrow: <NextArrow redArrow={this.props.redArrow}/>,
       appendDots: dots => (
         <DotsContainer>
           <Dots style={{ margin: "0px" }}>
@@ -39,7 +77,7 @@ class Carousel extends Component {
   
     const mobileSettings = {
       ...settings,
-      arrows: false
+      arrows: this.props.redArrow || this.props.greyArrow
     }
     return (
       <>
@@ -80,6 +118,7 @@ const Dots = styled.ul`
 const DotsContainer = styled.div`
   display: flex;
   justify-content: center;
+  width: 100%;
   @media (min-width: 481px) {}
   @media (min-width: 768px) {}
   @media (min-width: 1025px) {}

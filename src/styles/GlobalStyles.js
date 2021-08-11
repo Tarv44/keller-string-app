@@ -75,15 +75,26 @@ export const GlobalStyle = createGlobalStyle`
     list-style: none;
   }
 
+  .slick-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .slick-slide > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   .slick-list {
     margin-bottom: 15px;
   }
   
-  .slick-dots {
+  /* .slick-dots {
     position: static;
     width: 100%;
-  }
+  } */
 
   .slick-dots li {
     width: 2px;

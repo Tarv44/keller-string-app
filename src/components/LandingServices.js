@@ -1,31 +1,76 @@
 import React from 'react';
 import styled from 'styled-components';
 import Button from './styled/Button';
-import ShopImg from '../images/landing-shop.png';
-import RentImg from '../images/landing-rent.png';
-import RepairImg from '../images/landing-repair.png';
+import { useStaticQuery, graphql } from "gatsby";
+// import ShopImg from '../images/landing-shop.png';
+// import RentImg from '../images/landing-rent.png';
+// import RepairImg from '../images/landing-repair.png';
 import { Link } from 'gatsby';
 import Hr from './styled/Hr';
 
 const LandingServices = (props) => {
+  const ImageQuery = useStaticQuery(graphql`
+    query ImageQuery {
+      shop: contentfulAsset(contentful_id: {eq: "3ZLNg9XjelFEypzJ1LsTrj"}) {
+        fluid {
+          srcWebp
+          srcSetWebp
+          srcSet
+          src
+        }
+      }
+      rent: contentfulAsset(contentful_id: {eq: "3bY02gudHBY8QQCEeGn4mv"}) {
+        fluid {
+          srcWebp
+          srcSetWebp
+          srcSet
+          src
+        }
+      }
+      repair: contentfulAsset(contentful_id: {eq: "4x7lAEDh1nKeKDo2wJQjoF"}) {
+        fluid {
+          srcWebp
+          srcSetWebp
+          srcSet
+          src
+        }
+      }
+    }
+  `)
+  console.log(ImageQuery)
+  const ShopImg = ImageQuery.shop.fluid
+  const RentImg = ImageQuery.rent.fluid
+  const RepairImg = ImageQuery.repair.fluid
   return (
     <Services>
       <h2>What Can We Help You With?</h2>
       <Cards>
         <Card>
-          <img src={ShopImg} alt="Base of Violin" />
+          <picture>
+            <source srcSet={ShopImg.srcSetWebp} type='image/webp'/>
+            <source srcSet={ShopImg.srcSet} type='image/png'/>
+            <img width={200} height={200} src={ShopImg.src} alt="Base of Violin" />
+          </picture>
           <h4>Shop</h4>
           <p>Wherever you are, be a New Orleanian! Bring the experience of our violin shop to your home! </p>
           <Button as={Link}>Shop Now</Button>
         </Card>
         <Card>
-          <img src={RentImg} alt="Man helping child pick violin" />
+          <picture>
+            <source srcSet={RentImg.srcSetWebp} type='image/webp'/>
+            <source srcSet={RentImg.srcSet} type='image/png'/>
+            <img width={200} height={200} src={RentImg.src} alt="Man helping child pick violin" />
+          </picture>
           <h4>Rent</h4>
           <p>Optimal quality & terrific value to ensure that you or your child has an ideal playing experience!</p>
           <Button as={Link}>Rent Today</Button>
         </Card>
         <Card>
-          <img src={RepairImg} alt="Pieces of violin" />
+          <picture>
+            <source srcSet={RepairImg.srcSetWebp} type='image/webp'/>
+            <source srcSet={RepairImg.srcSet} type='image/png'/>
+            <img width={200} height={200} src={RepairImg.src} alt="Pieces of violin" />
+          </picture>
           <h4>Repair</h4>
           <RepairP>All restorations & repairs are performed by in-house Luthiers with over 30 years of experience.</RepairP>
           <Button as={Link}>Schedule a Service</Button>
@@ -80,6 +125,7 @@ const Card = styled.div`
   align-items: center;
   img {
     width: 200px;
+    height: auto;
     margin-bottom: 15px;
   }
   h4 {
