@@ -8,7 +8,7 @@ const MenuSidebar = (props) => {
   const [selected, setSelected] = useState(null)
   const tabs = data.map((t, i) => {
     return (
-      <Tab onClick={() => setSelected(t)}>
+      <Tab key={i} onClick={() => setSelected(t)}>
         <span>{t.label}</span>
         <AiFillCaretRight size={16} />
       </Tab>

@@ -11,7 +11,7 @@ const MenuDropdownTabs = ({selected, setSelected}) => {
       else setSelected(t)
     }
     return (
-      <Tab isSelected={isSelected} onClick={handleSelect}>
+      <Tab key={i} isSelected={isSelected} onClick={handleSelect}>
         <span>{t.label}</span>
         {!isSelected && <AiFillCaretDown size={16} />}
         {isSelected && <AiFillCaretUp size={16} />}
