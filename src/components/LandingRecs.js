@@ -55,9 +55,9 @@ const LandingRecs = (props) => {
       <Card key={i}>
         <h3>{r.title}</h3>
         <picture>
-          <source srcset={r.image.fluid.srcSetWebp} type="image/webp" />
-          <source srcset={r.image.fluid.srcSet} type="image/png" />
-          <img src={r.image.fluid.src} alt={r.title}/>
+          <source srcSet={r.image.fluid.srcSetWebp} type="image/webp" />
+          <source srcSet={r.image.fluid.srcSet} type="image/png" />
+          <img width={250} height={250} src={r.image.fluid.src} alt={r.title}/>
         </picture>
         <p>{r.desc}</p>
         <Button>Learn More</Button>
