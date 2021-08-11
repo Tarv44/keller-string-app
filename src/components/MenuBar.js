@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import Logo from '../images/logo.png';
+import Logo2x from '../images/logo@2x.png';
+import Logo3x from '../images/logo@3x.png';
 import Hamburger from '../images/hamburger.png';
 import Close from '../images/close.png';
 import Cart from '../images/cart.png';
@@ -19,7 +21,12 @@ const MenuBar = (props) => {
         </button>
       </MenuButton>
       <Link to='/'>
-        <LogoImg width={50} src={Logo} alt="Keller Strings Logo"/>
+        <LogoImg 
+          width={50} 
+          height={41.13} 
+          src={Logo}
+          srcSet={`${Logo} 50w, ${Logo2x} 100w, ${Logo3x} 150w`} 
+          alt="Keller Strings Logo"/>
       </Link>
       <MenuDropdownTabs 
         selected={props.selectedDropdown} 
@@ -77,6 +84,7 @@ const MenuButton = styled.div`
 `
 const LogoImg = styled.img`
   width: 50px;
+  height: auto;
   padding: 8px 0 11px;
 
   @media (min-width: 481px) {

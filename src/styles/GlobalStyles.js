@@ -23,6 +23,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     max-width: 100vw;
+    text-align: center
   }
 
   button {
@@ -52,7 +53,7 @@ export const GlobalStyle = createGlobalStyle`
 
   h3 {
     font-family: 'Libre Franklin';
-    font-size: 28px;
+    font-size: 18px;
     font-weight: 500;
   }
 
@@ -74,21 +75,27 @@ export const GlobalStyle = createGlobalStyle`
     list-style: none;
   }
 
+
   .slick-list {
     margin-bottom: 15px;
   }
   
   .slick-dots {
     position: static;
+    width: 100%;
   }
 
   .slick-dots li {
     width: 2px;
   }
+  .slick-dots li button {
+    width: 100%;
+  }
 
   .slick-dots li button:before {
     font-size: 8px;
     opacity: 7%;
+    width: 100%;
   }
 
   .slick-dots li.slick-active button:before {
@@ -102,6 +109,10 @@ export const GlobalStyle = createGlobalStyle`
 
     h2 {
       font-size: 32px;
+    }
+
+    h3 {
+      font-size: 22px;
     }
 
     p {
@@ -124,6 +135,11 @@ export const GlobalStyle = createGlobalStyle`
     h2 {
       font-size: 42px;
     }
+
+    h3 {
+      font-size: 28px;
+    }
+
     h4 {
       font-size: 35px;
     }

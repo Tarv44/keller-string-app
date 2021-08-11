@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import Button from './Button';
+import Button from './styled/Button';
 import ShopImg from '../images/landing-shop.png';
 import RentImg from '../images/landing-rent.png';
 import RepairImg from '../images/landing-repair.png';
 import { Link } from 'gatsby';
-import Hr from './Hr';
+import Hr from './styled/Hr';
 
 const LandingServices = (props) => {
   return (

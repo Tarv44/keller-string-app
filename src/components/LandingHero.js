@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import ViolinsSml from '../images/violins-sml.png';
 import ViolinsLrg from '../images/violins-lrg.png';
 import Carousel from './Carousel';
-import Button from './Button';
+import Button from './styled/Button';
 import { Link } from 'gatsby';
 
 const LandingHero = (props) => {

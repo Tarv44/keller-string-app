@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-import Button from './Button';
+import Button from './styled/Button';
 
 const SubmenuDropdownShop = (props) => {
   console.log(props.test)

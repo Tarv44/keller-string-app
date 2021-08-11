@@ -69,6 +69,8 @@ const Arrow = styled.button`
 const Dots = styled.ul`
   display: flex;
   align-items: center;
+  width: 100%;
+  justify-content: center;
   @media (min-width: 481px) {}
   @media (min-width: 768px) {}
   @media (min-width: 1025px) {}

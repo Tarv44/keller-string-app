@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import LandingHero from './LandingHero';
+import LandingPitch from './LandingPitch';
+import LandingRecs from './LandingRecs';
 import LandingServices from './LandingServices';
 
 const Landing = (props) => {
@@ -8,6 +10,8 @@ const Landing = (props) => {
     <LandingContainer>
       <LandingHero />
       <LandingServices />
+      <LandingPitch />
+      <LandingRecs />
     </LandingContainer>
   );
 };
