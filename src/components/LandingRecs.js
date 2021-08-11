@@ -12,8 +12,11 @@ const LandingRecs = (props) => {
           title
           desc
           image {
-            file {
-              url
+            fluid {
+              srcWebp
+              srcSetWebp
+              src
+              srcSet
             }
           }
           link
@@ -23,8 +26,11 @@ const LandingRecs = (props) => {
           link
           desc
           image {
-            file {
-              url
+            fluid {
+              srcWebp
+              srcSetWebp
+              src
+              srcSet
             }
           }
         }
@@ -33,8 +39,10 @@ const LandingRecs = (props) => {
           link
           desc
           image {
-            file {
-              url
+            fluid {
+              srcSetWebp
+              src
+              srcSet
             }
           }
         }
@@ -46,7 +54,11 @@ const LandingRecs = (props) => {
     return (
       <Card key={i}>
         <h3>{r.title}</h3>
-        <img src={r.image.file.url}/>
+        <picture>
+          <source srcset={r.image.fluid.srcSetWebp} type="image/webp" />
+          <source srcset={r.image.fluid.srcSet} type="image/png" />
+          <img src={r.image.fluid.src} alt={r.title}/>
+        </picture>
         <p>{r.desc}</p>
         <Button>Learn More</Button>
       </Card>
