@@ -2,15 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import {Link as GLink} from 'gatsby';
 import loadable from '@loadable/component';
+const LandingVideo = loadable(() => import('./LandingVideo'));
 const Carousel = loadable(() => import('./Carousel'));
 const Button = loadable(() => import('./styled/Button'));
 const Hr = loadable(() => import('./styled/Hr'));
 const Link = loadable(() => import('./styled/Link'));
 
 const LandingPitch = (props) => {
-  const Video = loadable(() => (
-    <Iframe src="https://www.youtube.com/embed/lbMAGW6n2ic" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
-  ))
   const Card1 = (
     <Card>
       <Container1>
@@ -33,7 +31,7 @@ const LandingPitch = (props) => {
       <h2>Trust Us With Your String Needs</h2>
       <h3>Let us tell you why...</h3>
       <IframeContainer>
-        <Video />
+        <LandingVideo />
       </IframeContainer>
       <Hr style={{marginBottom: 35}} />
       <CovidP>Learn all about our COVID precautions <Link>here</Link>.</CovidP>
@@ -78,23 +76,6 @@ const IframeContainer = styled.div`
   @media (min-width: 1025px) {}
   @media (min-width: 1200px) {
     margin-bottom: 69px;
-  }
-`
-
-const Iframe = styled.iframe`
-  width: 100%;
-  height: 216px;
-  @media (min-width: 481px) {
-    height: 326.75px;
-  }
-  @media (min-width: 768px) {
-    height: 437.5px;
-  }
-  @media (min-width: 1025px) {
-    height: 568.75px;
-  }
-  @media (min-width: 1200px) {
-    height: 700px;
   }
 `
 
