@@ -28,7 +28,7 @@ const NextArrow = (props) => {
   if (props.redArrow) {
     return (
       <img 
-      style={{marginLeft: 30}}
+        style={{marginLeft: 30}}
         onClick={props.onClick} 
         width={18} 
         height={19.8} 

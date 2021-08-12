@@ -9,7 +9,7 @@ import { Link } from 'gatsby';
 const LandingHero = (props) => {
 
   const Card1 = (
-    <Card imgSml={ViolinsSml} imgLrg={ViolinsLrg}>
+    <Card imgSml={'//images.ctfassets.net/j43gpj14xyuu/5fzWnG69O8uR1CSrJYHGxT/02b462416a55cc000536c180ceb0b1f8/violins-sml.png?w=800&q=50&fm=webp'} imgLrg={'//images.ctfassets.net/j43gpj14xyuu/anUshzXPB2vN0pte2SZwe/d3487255f0a7fdcf6ff0235fe5ff9feb/violins-lrg.png?w=800&q=50&fm=webp'}>
       <Container1>
         <Div1>
           <h1>New Orleans' Violin Shop</h1>
