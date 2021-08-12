@@ -1,4 +1,5 @@
-import getStripe from './stripe';
+import loadable from '@loadable/component';
+const getStripe = loadable(() => import('./stripe'));
 
 const cart = (cartDetails) => {
   return Object.entries(cartDetails).map(p => (
