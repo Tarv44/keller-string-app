@@ -32,14 +32,13 @@ module.exports = {
         billingAddressCollection: true,
       },
     },
-    {
-      resolve: `gatsby-source-stripe`,
-      options: {
-        objects: ["Price"],
-        secretKey: process.env.STRIPE_SECRET_KEY,
-        downloadFiles: false,
-      },
-    },
-
+    // {
+    //   resolve: `gatsby-source-stripe`,
+    //   options: {
+    //     objects: ["Price"],
+    //     secretKey: process.env.STRIPE_SECRET_KEY,
+    //     downloadFiles: false,
+    //   },
+    // },
   ],
 };
