@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { lazy } from 'react';
 import styled from 'styled-components';
 import {Link as GLink} from 'gatsby';
 import loadable from '@loadable/component';
-const LandingVideo = loadable(() => import('./LandingVideo'));
+const LandingVideo = lazy(() => import('./LandingVideo'));
 const Carousel = loadable(() => import('./Carousel'));
 const Button = loadable(() => import('./styled/Button'));
 const Hr = loadable(() => import('./styled/Hr'));
