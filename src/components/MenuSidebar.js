@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import data from '../data/MenuData';
-import SubmenuSidebar from './SubmenuSidebar';
 import {AiFillCaretRight} from 'react-icons/ai';
+import loadable from '@loadable/component';
+const SubmenuSidebar = loadable(() => import('./SubmenuSidebar'));
 
 const MenuSidebar = (props) => {
   const [selected, setSelected] = useState(null)

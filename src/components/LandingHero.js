@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import ViolinsSml from '../images/violins-sml.png';
-import ViolinsLrg from '../images/violins-lrg.png';
-import Carousel from './Carousel';
-import Button from './styled/Button';
+import loadable from '@loadable/component';
 import { Link } from 'gatsby';
+const Carousel = loadable(() => import('./Carousel'));
+const Button =  loadable(() => import('./styled/Button'));
+
 
 const LandingHero = (props) => {
 

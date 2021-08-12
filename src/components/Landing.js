@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import LandingHero from './LandingHero';
-import LandingPitch from './LandingPitch';
-import LandingRecs from './LandingRecs';
-import LandingServices from './LandingServices';
+import loadable from '@loadable/component'
+const LandingHero = loadable(() => import('./LandingHero'));
+const LandingPitch = loadable(() => import('./LandingPitch'));
+const LandingRecs = loadable(() => import('./LandingRecs'));
+const LandingServices = loadable(() => import('./LandingServices'));
 
 const Landing = (props) => {
   return (

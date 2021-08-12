@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import Hr from './styled/Hr';
-import Link from './styled/Link';
 import {Link as GLink} from 'gatsby';
-import Carousel from './Carousel';
-import Button from './styled/Button';
+import loadable from '@loadable/component';
+const Carousel = loadable(() => import('./Carousel'));
+const Button = loadable(() => import('./styled/Button'));
+const Hr = loadable(() => import('./styled/Hr'));
+const Link = loadable(() => import('./styled/Link'));
 
 const LandingPitch = (props) => {
   const Card1 = (

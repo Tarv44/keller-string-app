@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import AlertBar from './AlertBar';
-import MenuBar from './MenuBar';
-import SubmenuDropdown from './SubmenuDropdown';
-import MenuSidebar from './MenuSidebar';
-import styled from 'styled-components';
+import loadable from '@loadable/component';
+const AlertBar = loadable(() => import('./AlertBar'));
+const MenuBar = loadable(() => import('./MenuBar'));
+const SubmenuDropdown = loadable(() => import('./SubmenuDropdown'));
+const MenuSidebar = loadable(() => import('./MenuSidebar'));
+const styled = loadable(() => import('styled-components'));
 
 const Header = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false)

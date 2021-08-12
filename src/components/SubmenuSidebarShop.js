@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-import Button from './styled/Button';
+import loadable from '@loadable/component';
+const Button = loadable(() => import('./styled/Button'));
 
 const SubmenuSidebarShop = (props) => {
   console.log(props.test)

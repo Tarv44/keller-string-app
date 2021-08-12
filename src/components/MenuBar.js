@@ -9,7 +9,8 @@ import Cart from '../images/cart.png';
 import Heart from '../images/heart.png';
 import Account from '../images/account.png';
 import styled from 'styled-components';
-import MenuDropdownTabs from './MenuDropdownTabs';
+import loadable from '@loadable/component';
+const MenuDropdownTabs = loadable(() => import('./MenuDropdownTabs'));
 
 const MenuBar = (props) => {
   return (

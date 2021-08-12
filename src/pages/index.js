@@ -1,6 +1,7 @@
 import React from 'react';
-import Layout from '../components/Layout';
-import Landing from '../components/Landing';
+import loadable from '@loadable/component';
+const Layout = loadable(() => import('../components/Layout'));
+const Landing = loadable(() => import('../components/Landing'));
 
 const index = () => {
   return (

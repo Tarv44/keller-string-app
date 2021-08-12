@@ -1,12 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import Button from './styled/Button';
 import { useStaticQuery, graphql } from "gatsby";
-// import ShopImg from '../images/landing-shop.png';
-// import RentImg from '../images/landing-rent.png';
-// import RepairImg from '../images/landing-repair.png';
 import { Link } from 'gatsby';
-import Hr from './styled/Hr';
+import loadable from '@loadable/component';
+const Hr = loadable(() => import( './styled/Hr'));
+const Button = loadable(() => import( './styled/Button'));
 
 const LandingServices = (props) => {
   const ImageQuery = useStaticQuery(graphql`

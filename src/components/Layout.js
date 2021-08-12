@@ -1,7 +1,8 @@
 import React from 'react';
 import { GlobalStyle } from '../styles/GlobalStyles';
-import Header from './Header';
 import styled from 'styled-components';
+import loadable from '@loadable/component';
+const Header = loadable(() => import('./Header'));
 
 const Layout = ({children}) => {
   return (

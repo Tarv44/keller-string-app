@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import Carousel from './Carousel';
 import { useStaticQuery, graphql } from "gatsby";
-import Button from './styled/Button';
+import loadable from '@loadable/component';
+const Button = loadable(() => import('./styled/Button'));
+const Carousel = loadable(() => import('./Carousel'));
 
 const LandingRecs = (props) => {
   const data = useStaticQuery(graphql`
