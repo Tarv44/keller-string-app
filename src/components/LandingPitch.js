@@ -8,6 +8,9 @@ const Hr = loadable(() => import('./styled/Hr'));
 const Link = loadable(() => import('./styled/Link'));
 
 const LandingPitch = (props) => {
+  const Video = loadable(() => (
+    <Iframe src="https://www.youtube.com/embed/lbMAGW6n2ic" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+  ))
   const Card1 = (
     <Card>
       <Container1>
@@ -30,7 +33,7 @@ const LandingPitch = (props) => {
       <h2>Trust Us With Your String Needs</h2>
       <h3>Let us tell you why...</h3>
       <IframeContainer>
-        <Iframe src="https://www.youtube.com/embed/lbMAGW6n2ic" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+        <Video />
       </IframeContainer>
       <Hr style={{marginBottom: 35}} />
       <CovidP>Learn all about our COVID precautions <Link>here</Link>.</CovidP>

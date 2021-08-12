@@ -3,8 +3,7 @@ import Layout from '../components/Layout';
 import { useShoppingCart } from "use-shopping-cart";
 import CartProductCard from '../components/CartProductCard';
 import CartTotal from '../components/CartTotal';
-import loadable from '@loadable/component';
-const redirectToCheckout = loadable(() => import('../utils/checkout'));
+import redirectToCheckout from '../utils/checkout';
 
 const CartPage = () => {
   const {cartDetails} = useShoppingCart()
