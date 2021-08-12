@@ -11,6 +11,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-react-helmet",
+    "gatsby-plugin-loadable-components-ssr",
     {
       resolve: "gatsby-source-contentful",
       options: {
