@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {Suspense} from 'react';
 import styled from 'styled-components';
 import {Link as GLink} from 'gatsby';
 import loadable from '@loadable/component';
-const LandingVideo = loadable(() => import('./LandingVideo'));
+const LandingVideo = React.lazy(() => import('./LandingVideo'));
 const Carousel = loadable(() => import('./Carousel'));
 const Button = loadable(() => import('./styled/Button'));
 const Hr = loadable(() => import('./styled/Hr'));
@@ -31,7 +31,9 @@ const LandingPitch = (props) => {
       <h2>Trust Us With Your String Needs</h2>
       <h3>Let us tell you why...</h3>
       <IframeContainer>
-        <LandingVideo />
+        <Suspense fallback={<div>Loading...</div>}>
+          <LandingVideo />
+        </Suspense>
       </IframeContainer>
       <Hr style={{marginBottom: 35}} />
       <CovidP>Learn all about our COVID precautions <Link>here</Link>.</CovidP>

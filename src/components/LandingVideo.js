@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const LandingVideo = (props) => {
+  const [isPlaying, setIsPlaying] = useState(false)
   return (
-    <Iframe src="https://www.youtube.com/embed/lbMAGW6n2ic" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+    <Iframe 
+      src="https://www.youtube.com/embed/lbMAGW6n2ic"
+      title="YouTube video player" 
+      frameBorder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowFullScreen />
   );
 };
 
