@@ -97,6 +97,7 @@ const Recs = styled.div`
 const CarouselContainer = styled.div`
   padding: 0 33.5px;
   display: block;
+  margin-bottom: 65px;
   @media (min-width: 481px) {}
   @media (min-width: 768px) {
     display: none;

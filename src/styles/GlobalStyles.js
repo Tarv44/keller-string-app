@@ -75,6 +75,10 @@ export const GlobalStyle = createGlobalStyle`
     list-style: none;
   }
 
+  img {
+    max-width: 100%;
+  }
+
   .slick-slider {
     display: flex;
     align-items: center;
