@@ -1,9 +1,5 @@
 import React, { useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import PlaceholderSml from '../images/landing-video-382.png';
-import PlaceholderMed from '../images/landing-video-775.png';
-import PlaceholderLrg from '../images/landing-video-1240.png';
-import PlaceholderLrg2x from '../images/landing-video-1860.png';
 import styled from 'styled-components';
 
 const LandingVideo = (props) => {
@@ -26,14 +22,13 @@ const LandingVideo = (props) => {
   return (
     <>
       {!isLoaded && (
-        <Placeholder onClick={() => setIsLoaded(true)}>
-          <img 
-            width={382}
-            height={216}
-            src={image.src} 
-            srcSet={`${image.srcSetWebp} ${image.srcSet}`} 
-            alt={'Introduction video'} />
-        </Placeholder>
+        <Placeholder 
+          onClick={() => setIsLoaded(true)}
+          width={343}
+          height={225.5}
+          src={image.src} 
+          srcSet={`${image.srcSetWebp} ${image.srcSet}`} 
+          alt={'Introduction video'} />
       )}
       {isLoaded && <Iframe 
       src="https://www.youtube.com/embed/lbMAGW6n2ic"
@@ -48,26 +43,46 @@ const LandingVideo = (props) => {
 export default LandingVideo;
 
 const Iframe = styled.iframe`
-  width: 100%;
-  height: 216px;
+  height: 225.5px;
+  width: 343px;
   @media (min-width: 481px) {
-    height: 326.75px;
+    height: 294.7px;
+    width: 448px;
   }
   @media (min-width: 768px) {
-    height: 437.5px;
+    width: 678px;
+    height: 446px;
   }
   @media (min-width: 1025px) {
-    height: 568.75px;
+    width: 925px;
+    height: 608.5px;
   }
   @media (min-width: 1200px) {
-    height: 700px;
+    width: 1000px;
+    height: 657.9px;
+  }
+  @media screen and (min-width: 1440px) {
+    width: 1240px;
+    height: 815.8px;
   }
 `
 
-const Placeholder = styled.div`
-  
-  @media (min-width: 481px) {}
-  @media (min-width: 768px) {}
-  @media (min-width: 1025px) {}
-  @media (min-width: 1200px) {}
+const Placeholder = styled.img`
+  height: auto;
+  width: 343px;
+  @media (min-width: 481px) {
+    width: 448px;
+  }
+  @media (min-width: 768px) {
+    width: 678px;
+  }
+  @media (min-width: 1025px) {
+    width: 925px;
+  }
+  @media (min-width: 1200px) {
+    width: 1000px;
+  }
+  @media screen and (min-width: 1440px) {
+    width: 1240px;
+  }
 `

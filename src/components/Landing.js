@@ -19,6 +19,7 @@ const Landing = (props) => {
 export default Landing;
 
 const LandingContainer = styled.div`
+  padding: 0 0 50px;
   @media (min-width: 481px) {}
   @media (min-width: 768px) {
     padding: 25px 30px 100px;

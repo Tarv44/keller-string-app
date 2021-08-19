@@ -69,7 +69,6 @@ const Pitch = styled.div`
 
 const IframeContainer = styled.div`
   width: 100%;
-  padding: 0 16px;
   margin-bottom: 50px;
   @media (min-width: 481px) {}
   @media (min-width: 768px) {

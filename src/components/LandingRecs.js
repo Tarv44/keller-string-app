@@ -112,12 +112,6 @@ const GalleryContainer = styled.div`
   @media (min-width: 768px) {
     display: flex;
     justify-content: space-around;
-    /* > div {
-      margin-right: 40px;
-    }
-    > div:last-child {
-      margin-right: 0;
-    } */
   }
   @media (min-width: 1025px) {}
   @media (min-width: 1200px) {}
