@@ -17,8 +17,8 @@ const MenuBar = (props) => {
     <Bar>
       <MenuButton>
         <button onClick={() => props.setSidebarOpen(!props.sidebarOpen)}>
-          {!props.sidebarOpen && <img width={22} src={Hamburger} alt="Menu Icon" />}
-          {props.sidebarOpen && <img width={18} src={Close} alt="Close Menu Icon" />}
+          {!props.sidebarOpen && <img width={22} height={17.5} src={Hamburger} alt="Menu Icon" />}
+          {props.sidebarOpen && <img width={18} height={18} src={Close} alt="Close Menu Icon" />}
         </button>
       </MenuButton>
       <Link to='/'>
@@ -35,13 +35,13 @@ const MenuBar = (props) => {
       />
       <Icons>
         <Link>
-          <AccountIcon src={Account} alt="Account Icon" />
+          <AccountIcon width={20} height={20} src={Account} alt="Account Icon" />
         </Link>
         <Link>
-          <HeartIcon src={Heart} alt="Favorite Icon" />
+          <HeartIcon width={20} height={17.44} src={Heart} alt="Favorite Icon" />
         </Link>
         <Link to={'/cart'}>
-          <CartIcon src={Cart} alt="Cart Icon" />
+          <CartIcon width={22} height={18.2} src={Cart} alt="Cart Icon" />
         </Link>
       </Icons>
     </Bar>

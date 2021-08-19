@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 import PlaceholderSml from '../images/landing-video-382.png';
 import PlaceholderMed from '../images/landing-video-775.png';
 import PlaceholderLrg from '../images/landing-video-1240.png';
@@ -6,21 +7,33 @@ import PlaceholderLrg2x from '../images/landing-video-1860.png';
 import styled from 'styled-components';
 
 const LandingVideo = (props) => {
+  const data = useStaticQuery(graphql`
+    query PlaceholderQuery {
+      contentfulLandingVideo {
+        image {
+          fluid {
+            src
+            srcSet
+            srcSetWebp
+            srcWebp
+          }
+        }
+      }
+    }
+  `)
   const [isLoaded, setIsLoaded] = useState(false)
+  const image = data.contentfulLandingVideo.image.fluid
   return (
     <>
       {!isLoaded && (
-        <div onClick={() => setIsLoaded(true)}>
+        <Placeholder onClick={() => setIsLoaded(true)}>
           <img 
-            src={PlaceholderSml} 
-            srcSet={`
-              ${PlaceholderSml} 382w, 
-              ${PlaceholderMed} 775w,
-              ${PlaceholderLrg} 1240w,
-              ${PlaceholderLrg2x} 1860w,
-            `} 
+            width={382}
+            height={216}
+            src={image.src} 
+            srcSet={`${image.srcSetWebp} ${image.srcSet}`} 
             alt={'Introduction video'} />
-        </div>
+        </Placeholder>
       )}
       {isLoaded && <Iframe 
       src="https://www.youtube.com/embed/lbMAGW6n2ic"
@@ -49,4 +62,12 @@ const Iframe = styled.iframe`
   @media (min-width: 1200px) {
     height: 700px;
   }
+`
+
+const Placeholder = styled.div`
+  
+  @media (min-width: 481px) {}
+  @media (min-width: 768px) {}
+  @media (min-width: 1025px) {}
+  @media (min-width: 1200px) {}
 `
