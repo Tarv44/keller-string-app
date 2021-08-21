@@ -132,6 +132,7 @@ const Card = styled.div`
   p {
     width: 250px;
     margin-bottom: 15px;
+    font-weight: 500;
   }
   @media (min-width: 481px) {}
   @media (min-width: 768px) {

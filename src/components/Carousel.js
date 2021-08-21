@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Slider from 'react-slick';
-import Left from '../images/arrow-left.png';
-import Left2x from '../images/arrow-left@2x.png';
-import Left3x from '../images/arrow-left@3x.png';
-import Right from '../images/arrow-right.png';
-import Right2x from '../images/arrow-right@2x.png';
-import Right3x from '../images/arrow-right@3x.png';
+import Left from '../images/arrow-left.svg';
+import Right from '../images/arrow-right.svg';
 import {AiFillCaretRight, AiFillCaretLeft} from 'react-icons/ai';
 
 const PrevArrow = (props) => {
@@ -17,8 +13,7 @@ const PrevArrow = (props) => {
         onClick={props.onClick} 
         width={18} 
         height={19.8} 
-        src={Left} 
-        srcSet={`${Left} 1x, ${Left2x} 2x, ${Left3x} 3x`} 
+        src={Left}
         alt="Left arrow"/>
     )
   }
@@ -33,7 +28,6 @@ const NextArrow = (props) => {
         width={18} 
         height={19.8} 
         src={Right} 
-        srcSet={`${Right} 1x, ${Right2x} 2x, ${Right3x} 3x`} 
         alt="Right arrow"/>
     )
   }

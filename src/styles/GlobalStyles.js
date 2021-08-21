@@ -68,7 +68,8 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Libre Franklin';
     font-size: 16px;
     font-weight: 400;
-    color: var(--color-black)
+    color: var(--color-black);
+    line-height: 22px;
   }
 
   ul, ol {

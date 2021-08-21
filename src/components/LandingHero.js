@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import loadable from '@loadable/component';
 import { Link } from 'gatsby';
+import Button from './styled/Button';
 const Carousel = loadable(() => import('./Carousel'));
-const Button =  loadable(() => import('./styled/Button'));
 
 
 const LandingHero = (props) => {

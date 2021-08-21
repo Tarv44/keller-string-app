@@ -131,9 +131,11 @@ const Card = styled.div`
   }
   h3 {
     margin-bottom: 20px;
+    font-weight: 700;
   }
   p {
     margin-bottom: 20px;
+    font-weight: 500;
   } 
   @media (min-width: 481px) {}
   @media (min-width: 768px) {

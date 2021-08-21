@@ -2,6 +2,7 @@ import React from 'react';
 import { GlobalStyle } from '../styles/GlobalStyles';
 import styled from 'styled-components';
 import loadable from '@loadable/component';
+import Footer from './Footer';
 const Header = loadable(() => import('./Header'));
 
 const Layout = ({children}) => {
@@ -12,6 +13,7 @@ const Layout = ({children}) => {
       <Main>
         {children}
       </Main>
+      <Footer />
     </>
   )
 }

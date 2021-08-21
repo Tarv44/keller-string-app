@@ -2,9 +2,9 @@ import React, {Suspense} from 'react';
 import styled from 'styled-components';
 import {Link as GLink} from 'gatsby';
 import loadable from '@loadable/component';
+import Button from './styled/Button';
 const LandingVideo = React.lazy(() => import('./LandingVideo'));
 const Carousel = loadable(() => import('./Carousel'));
-const Button = loadable(() => import('./styled/Button'));
 const Hr = loadable(() => import('./styled/Hr'));
 const Link = loadable(() => import('./styled/Link'));
 
@@ -106,6 +106,7 @@ const CarouselContainer = styled.div`
   }
   p {
     margin-bottom: 12px;
+    font-weight: 500;
   }
   @media (min-width: 481px) {}
   @media (min-width: 768px) {
