@@ -86,6 +86,10 @@ export const GlobalStyle = createGlobalStyle`
     justify-content: center;
   }
 
+  .slick-slide[style="width: 0px;"] {
+    width: calc(100vw - 163px) !important;
+  }
+
   .slick-slide > div {
     display: flex;
     justify-content: center;
