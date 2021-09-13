@@ -33,7 +33,7 @@ const MenuBar = (props) => {
         selected={props.selectedDropdown} 
         setSelected={props.setSelectedDropdown} 
       />
-      <Icons>
+      {/* <Icons>
         <Link>
           <AccountIcon width={20} height={20} src={Account} alt="Account Icon" />
         </Link>
@@ -43,7 +43,7 @@ const MenuBar = (props) => {
         <Link to={'/cart'}>
           <CartIcon width={22} height={18.2} src={Cart} alt="Cart Icon" />
         </Link>
-      </Icons>
+      </Icons> */}
     </Bar>
   );
 };
@@ -53,6 +53,7 @@ export default MenuBar;
 const Bar = styled.div`
   display: flex;
   justify-content: space-between;
+  flex-direction: row-reverse;
   align-items: stretch;
   padding: 0 20px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -64,6 +65,7 @@ const Bar = styled.div`
   }
   @media screen and (min-width: 1025px) {
     padding: 0 45px;
+    flex-direction: row;
   }
   @media screen and (min-width: 1200px) {
     padding: 0 70px;
@@ -74,10 +76,10 @@ const MenuButton = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 82px;
+  /* width: 82px; */
 
   @media screen and (min-width: 768px) {
-    width: 104px;
+    /* width: 104px; */
   }
   @media screen and (min-width: 1025px) {
     display: none;

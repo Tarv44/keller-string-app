@@ -64,7 +64,7 @@ const MobileMessage = styled(ReactMarkdown)`
   left: center;
   font-size: 12px;
 
-  p {
+  p, a {
     font-size: 12px;
     color: #ffffff;
   }
@@ -79,7 +79,11 @@ const DesktopMessage = styled(ReactMarkdown)`
   position: absolute;
   left: center;
 
-  p {
+  a {
+    text-decoration: underline;
+  }
+
+  p, a{
     font-size: 16px;
     color: #ffffff;
   }
@@ -87,7 +91,7 @@ const DesktopMessage = styled(ReactMarkdown)`
     display: block;
   }
   @media screen and (min-width: 768px) {
-    p {
+    p, a {
       font-size: 20px;
     }
   }

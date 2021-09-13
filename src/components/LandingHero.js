@@ -14,7 +14,7 @@ const LandingHero = (props) => {
         <Div1>
           <h1>Hurricane Ida Updates</h1>
           <p><em>We are closed until further notice.</em></p>
-          <Btn as={Link}>Learn More</Btn>
+          <Btn to={'/hurricane-ida'} as={Link}>Learn More</Btn>
         </Div1>
       </Container1>
     </Card>
