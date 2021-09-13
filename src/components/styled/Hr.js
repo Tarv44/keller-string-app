@@ -1,14 +1,15 @@
 import styled from 'styled-components';
 
 const Hr = styled.hr`
-  margin: 0 27px;
+  width: 360px;
+  margin: auto;
   color: var(--color-grey-3);
-  @media (min-width: 481px) {}
-  @media (min-width: 768px) {
+  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 768px) {
     display: none;
   }
-  @media (min-width: 1025px) {}
-  @media (min-width: 1200px) {}
+  @media screen and (min-width: 1025px) {}
+  @media screen and (min-width: 1200px) {}
 `
 
 export default Hr;

@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-import loadable from '@loadable/component';
-const Button = loadable(() => import('./styled/Button'));
+import Button from './styled/Button';
 
 const SubmenuDropdownShop = (props) => {
   console.log(props.test)
@@ -13,7 +12,7 @@ const SubmenuDropdownShop = (props) => {
         <div>
           <InvItems>
             <li>
-              <Link>Instruments</Link>
+              <Link to='/instrument-categories'>Instruments</Link>
             </li>
             <li>
               <Link>Accesories</Link>
@@ -70,10 +69,10 @@ const Submenu = styled.div`
   li, p {
     font-size: 22px;
   }
-  @media (min-width: 481px) {}
-  @media (min-width: 768px) {}
-  @media (min-width: 1025px) {}
-  @media (min-width: 1200px) {}
+  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 768px) {}
+  @media screen and (min-width: 1025px) {}
+  @media screen and (min-width: 1200px) {}
 `
 
 const Inventory = styled.div`
@@ -81,10 +80,10 @@ const Inventory = styled.div`
   p > a {
     text-decoration: underline;
   }
-  @media (min-width: 481px) {}
-  @media (min-width: 768px) {}
-  @media (min-width: 1025px) {}
-  @media (min-width: 1200px) {}
+  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 768px) {}
+  @media screen and (min-width: 1025px) {}
+  @media screen and (min-width: 1200px) {}
 `
 
 const InvItems = styled.ul`
@@ -94,10 +93,10 @@ const InvItems = styled.ul`
   li {
     width: 50%;
   }
-  @media (min-width: 481px) {}
-  @media (min-width: 768px) {}
-  @media (min-width: 1025px) {}
-  @media (min-width: 1200px) {}
+  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 768px) {}
+  @media screen and (min-width: 1025px) {}
+  @media screen and (min-width: 1200px) {}
 `
 
 const Cta = styled.div`
@@ -105,17 +104,17 @@ const Cta = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  @media (min-width: 481px) {}
-  @media (min-width: 768px) {}
-  @media (min-width: 1025px) {}
-  @media (min-width: 1200px) {}
+  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 768px) {}
+  @media screen and (min-width: 1025px) {}
+  @media screen and (min-width: 1200px) {}
 `
 
 const Btn = styled(Button)`
   padding: 6px 20px;
   width: 100%;
-  @media (min-width: 481px) {}
-  @media (min-width: 768px) {}
-  @media (min-width: 1025px) {}
-  @media (min-width: 1200px) {}
+  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 768px) {}
+  @media screen and (min-width: 1025px) {}
+  @media screen and (min-width: 1200px) {}
 `

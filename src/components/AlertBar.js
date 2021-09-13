@@ -46,13 +46,13 @@ const Bar = styled.div`
   color: white;
   position: relative;
 
-  @media (min-width: 481px) {
+  @media screen and (min-width: 481px) {
     padding: 13px 8px;
   }
-  @media (min-width: 520px) {
+  @media screen and (min-width: 520px) {
     padding: 13px 4.8%;
   }
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     padding: 27px 4.8%;
   }
 `
@@ -68,7 +68,7 @@ const MobileMessage = styled(ReactMarkdown)`
     font-size: 12px;
     color: #ffffff;
   }
-  @media (min-width: 481px) {
+  @media screen and (min-width: 481px) {
     display: none;
   }
 `
@@ -83,10 +83,10 @@ const DesktopMessage = styled(ReactMarkdown)`
     font-size: 16px;
     color: #ffffff;
   }
-  @media (min-width: 481px) {
+  @media screen and (min-width: 481px) {
     display: block;
   }
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     p {
       font-size: 20px;
     }
@@ -98,7 +98,7 @@ const MobileIcon = styled(CgClose)`
   cursor: pointer;
   display: block;
 
-  @media (min-width: 481px) {
+  @media screen and (min-width: 481px) {
     display: none;
   }
 `
@@ -108,10 +108,10 @@ const DesktopIcon = styled(CgClose)`
   cursor: pointer;
   display: none;
 
-  @media (min-width: 481px) {
+  @media screen and (min-width: 481px) {
     display: block;
   }
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     display: none;
   }
 `
@@ -120,11 +120,11 @@ const LargeIcon = styled(CgClose)`
   align-self: flex-end;
   cursor: pointer;
   display: none;
-  @media (min-width: 481px) {}
-  @media (min-width: 768px) {
+  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 768px) {
     display: block;
   }
-  @media (min-width: 1025px) {}
-  @media (min-width: 1200px) {}
+  @media screen and (min-width: 1025px) {}
+  @media screen and (min-width: 1200px) {}
 `
 

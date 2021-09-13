@@ -40,18 +40,18 @@ const Dropdown = styled.div`
   h3 {
     text-transform: uppercase;
   }
-  @media (min-width: 481px) {}
-  @media (min-width: 768px) {}
-  @media (min-width: 1025px) {}
-  @media (min-width: 1200px) {}
+  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 768px) {}
+  @media screen and (min-width: 1025px) {}
+  @media screen and (min-width: 1200px) {}
 `
 
 const Ul = styled.ul`
   padding-left: 41px;
-  @media (min-width: 481px) {}
-  @media (min-width: 768px) {}
-  @media (min-width: 1025px) {}
-  @media (min-width: 1200px) {}
+  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 768px) {}
+  @media screen and (min-width: 1025px) {}
+  @media screen and (min-width: 1200px) {}
 `
 
 const Button = styled.button`
@@ -65,16 +65,16 @@ const Button = styled.button`
     font-size: 18px;
     font-weight: 600;
   }
-  @media (min-width: 481px) {}
-  @media (min-width: 768px) {}
-  @media (min-width: 1025px) {}
-  @media (min-width: 1200px) {}
+  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 768px) {}
+  @media screen and (min-width: 1025px) {}
+  @media screen and (min-width: 1200px) {}
 `
 
 const Img = styled.img`
   transform: ${props => props.isOpen ? 'rotate(180deg)' : 'rotate(0deg)'};
-  @media (min-width: 481px) {}
-  @media (min-width: 768px) {}
-  @media (min-width: 1025px) {}
-  @media (min-width: 1200px) {}
+  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 768px) {}
+  @media screen and (min-width: 1025px) {}
+  @media screen and (min-width: 1200px) {}
 `

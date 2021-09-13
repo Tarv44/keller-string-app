@@ -65,7 +65,7 @@ const LandingRecs = (props) => {
           <h3>{r.title}</h3>
           <p>{r.desc}</p>
         </div>
-        <Button>Learn More</Button>
+        <Button disabled={true}>Learn More</Button>
       </Card>
     )
   })
@@ -89,33 +89,33 @@ const Recs = styled.div`
   h2 {
     margin-bottom: 25px;
   }
-  @media (min-width: 481px) {}
-  @media (min-width: 768px) {}
-  @media (min-width: 1025px) {}
-  @media (min-width: 1200px) {}
+  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 768px) {}
+  @media screen and (min-width: 1025px) {}
+  @media screen and (min-width: 1200px) {}
 `
 
 const CarouselContainer = styled.div`
   padding: 0 33.5px;
   display: block;
   margin-bottom: 65px;
-  @media (min-width: 481px) {}
-  @media (min-width: 768px) {
+  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 768px) {
     display: none;
   }
-  @media (min-width: 1025px) {}
-  @media (min-width: 1200px) {}
+  @media screen and (min-width: 1025px) {}
+  @media screen and (min-width: 1200px) {}
 `
 
 const GalleryContainer = styled.div`
   display: none;
-  @media (min-width: 481px) {}
-  @media (min-width: 768px) {
+  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 768px) {
     display: flex;
     justify-content: space-around;
   }
-  @media (min-width: 1025px) {}
-  @media (min-width: 1200px) {}
+  @media screen and (min-width: 1025px) {}
+  @media screen and (min-width: 1200px) {}
 `
 
 const Card = styled.div`
@@ -138,8 +138,8 @@ const Card = styled.div`
     margin-bottom: 20px;
     font-weight: 500;
   } 
-  @media (min-width: 481px) {}
-  @media (min-width: 768px) {
+  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 768px) {
     max-width: 200px;
     height: 460.8px;
     button {
@@ -152,7 +152,7 @@ const Card = styled.div`
       font-size: 16px;
     }
   }
-  @media (min-width: 1025px) {
+  @media screen and (min-width: 1025px) {
     max-width: 250px;
     height: 500px;
     button {
@@ -165,7 +165,7 @@ const Card = styled.div`
       font-size: 18px;
     }
   }
-  @media (min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     max-width: 345px;
     height: 555px;
     img {

@@ -33,9 +33,9 @@ const Tabs = styled.div`
   min-height: 100%;
   align-items: stretch;
 
-  @media (min-width: 481px) {}
+  @media screen and (min-width: 481px) {}
 
-  @media (min-width: 1025px) {
+  @media screen and (min-width: 1025px) {
     display: flex;
   }
 `
@@ -63,12 +63,12 @@ const Tab = styled.button`
     color: var(--color-primary);
   }
 
-  @media (min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     font-size: ${props => props.isSelected ? '23px' : '24px'};
     padding: 0 21px;
   } 
 
-  @media (min-width: 1440px) {
+  @media screen and (min-width: 1440px) {
     font-size: ${props => props.isSelected ? '27px' : '28px'};
     padding: 0 26px;
   }

@@ -46,10 +46,10 @@ const Ftr = styled.footer`
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media (min-width: 481px) {}
-  @media (min-width: 768px) {}
-  @media (min-width: 1025px) {}
-  @media (min-width: 1200px) {}
+  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 768px) {}
+  @media screen and (min-width: 1025px) {}
+  @media screen and (min-width: 1200px) {}
 `
 
 const FooterContainer = styled.div`
@@ -57,14 +57,14 @@ const FooterContainer = styled.div`
   flex-direction: column;
   align-items: center;
   width: 360px;
-  @media (min-width: 481px) {}
-  @media (min-width: 768px) {
+  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 768px) {
     flex-direction: row-reverse;
     justify-content: center;
     width: 100%;
   }
-  @media (min-width: 1025px) {}
-  @media (min-width: 1200px) {}
+  @media screen and (min-width: 1025px) {}
+  @media screen and (min-width: 1200px) {}
 `
 const Signup = styled.div`
   margin-bottom: 35px;
@@ -83,8 +83,8 @@ const Signup = styled.div`
   div {
     margin-bottom: 15px;
   }
-  @media (min-width: 481px) {}
-  @media (min-width: 768px) {
+  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 768px) {
     h3, p {
       text-align: left;
     }
@@ -94,8 +94,8 @@ const Signup = styled.div`
     align-items: flex-start;
     margin-bottom: 27px;
   }
-  @media (min-width: 1025px) {}
-  @media (min-width: 1200px) {
+  @media screen and (min-width: 1025px) {}
+  @media screen and (min-width: 1200px) {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -106,7 +106,7 @@ const Signup = styled.div`
       font-size: 19px;
     }
   }
-  @media (min-width: 1440px) {
+  @media screen and (min-width: 1440px) {
     h3 {
       font-size: 32px;
     }
@@ -118,20 +118,20 @@ const Signup = styled.div`
 
 const NavSection = styled.div`
   margin-bottom: 35px;
-  @media (min-width: 481px) {}
-  @media (min-width: 768px) {
+  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 768px) {
     margin-bottom: 0;
   }
-  @media (min-width: 1025px) {}
-  @media (min-width: 1200px) {}
+  @media screen and (min-width: 1025px) {}
+  @media screen and (min-width: 1200px) {}
 `
 
 const Dropdowns = styled.div`
   border-bottom: 0.75px solid rgba(118, 130, 142, 0.8);
-  @media (min-width: 481px) {}
-  @media (min-width: 768px) {
+  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 768px) {
     display: none;
   }
-  @media (min-width: 1025px) {}
-  @media (min-width: 1200px) {}
+  @media screen and (min-width: 1025px) {}
+  @media screen and (min-width: 1200px) {}
 `

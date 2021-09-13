@@ -51,7 +51,7 @@ const LandingServices = (props) => {
           </picture>
           <h4>Shop</h4>
           <p>Wherever you are, be a New Orleanian! Bring the experience of our violin shop to your home! </p>
-          <Button as={Link}>Shop Now</Button>
+          <Button disabled={true} as={Link}>Shop Now</Button>
         </Card>
         <Card>
           <picture>
@@ -61,7 +61,7 @@ const LandingServices = (props) => {
           </picture>
           <h4>Rent</h4>
           <p>Optimal quality & terrific value to ensure that you or your child has an ideal playing experience!</p>
-          <Button as={Link}>Rent Today</Button>
+          <Button disabled={true} as={Link}>Rent Today</Button>
         </Card>
         <Card>
           <picture>
@@ -71,7 +71,7 @@ const LandingServices = (props) => {
           </picture>
           <h4>Repair</h4>
           <RepairP>All restorations & repairs are performed by in-house Luthiers with over 30 years of experience.</RepairP>
-          <Button as={Link}>Schedule a Service</Button>
+          <Button disabled={true} as={Link}>Schedule a Service</Button>
         </Card>
       </Cards>
       <Hr />
@@ -89,12 +89,12 @@ const Services = styled.div`
   h2 {
     margin-bottom: 25px;
   }
-  @media (min-width: 481px) {}
-  @media (min-width: 768px) {
+  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 768px) {
     margin-bottom: 100px;
   }
-  @media (min-width: 1025px) {}
-  @media (min-width: 1200px) {}
+  @media screen and (min-width: 1025px) {}
+  @media screen and (min-width: 1200px) {}
 `
 
 const Cards = styled.div`
@@ -107,14 +107,14 @@ const Cards = styled.div`
   > div:last-child {
     margin-bottom: 0;
   }
-  @media (min-width: 481px) {}
-  @media (min-width: 768px) {
+  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 768px) {
     justify-content: space-between;
     flex-direction: row;
     margin-bottom: 0;
   }
-  @media (min-width: 1025px) {}
-  @media (min-width: 1200px) {}
+  @media screen and (min-width: 1025px) {}
+  @media screen and (min-width: 1200px) {}
 `
 
 const Card = styled.div`
@@ -134,8 +134,8 @@ const Card = styled.div`
     margin-bottom: 15px;
     font-weight: 500;
   }
-  @media (min-width: 481px) {}
-  @media (min-width: 768px) {
+  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 768px) {
     p, a {
       width: 200px;
     }
@@ -143,12 +143,12 @@ const Card = styled.div`
       font-size: 16px;
     }
   }
-  @media (min-width: 1025px) {
+  @media screen and (min-width: 1025px) {
     p, a, img {
       width: 250px;
     }
   }
-  @media (min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     height: 514px;
     justify-content: space-between;
     p, a, img {
@@ -162,10 +162,10 @@ const Card = styled.div`
 
 const RepairP = styled.p`
   
-  @media (min-width: 481px) {}
-  @media (min-width: 768px) {}
-  @media (min-width: 1025px) {}
-  @media (min-width: 1200px) {
+  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 768px) {}
+  @media screen and (min-width: 1025px) {}
+  @media screen and (min-width: 1200px) {
     font-size: 19px !important;
   }
 `

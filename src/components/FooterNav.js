@@ -104,12 +104,12 @@ const Nav = styled.nav`
     margin-right: 25px;
     width: 93px;
   }
-  @media (min-width: 481px) {}
-  @media (min-width: 768px) {
+  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 768px) {
     display: flex;
   }
-  @media (min-width: 1025px) {}
-  @media (min-width: 1200px) {
+  @media screen and (min-width: 1025px) {}
+  @media screen and (min-width: 1200px) {
     h3 {
       font-size: 22px;
     }
@@ -125,7 +125,7 @@ const Nav = styled.nav`
       width: 120px;
     }
   }
-  @media (min-width: 1440px) {
+  @media screen and (min-width: 1440px) {
     > div:nth-child(-n + 2) {
       margin-right: 80px;
     }
@@ -136,10 +136,10 @@ const Right = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  @media (min-width: 481px) {}
-  @media (min-width: 768px) {}
-  @media (min-width: 1025px) {}
-  @media (min-width: 1200px) {
+  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 768px) {}
+  @media screen and (min-width: 1025px) {}
+  @media screen and (min-width: 1200px) {
     flex-direction: row;
   }
 `
@@ -147,15 +147,15 @@ const Right = styled.div`
 const ShopAccount = styled.div`
   display: flex;
   align-items: flex-start;
-  @media (min-width: 481px) {}
-  @media (min-width: 768px) {
+  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 768px) {
     > div:first-child {
       width: 100px;
       margin-right: 45px;
     }
   }
-  @media (min-width: 1025px) {}
-  @media (min-width: 1200px) {
+  @media screen and (min-width: 1025px) {}
+  @media screen and (min-width: 1200px) {
     flex-direction: column-reverse;
     width: 154px;
     margin-right: 40px;
@@ -167,27 +167,27 @@ const ShopAccount = styled.div`
       margin-bottom: 32px;
     }
   }
-  @media (min-width: 1440px) {
+  @media screen and (min-width: 1440px) {
     margin-right: 80px;
   }
 `
 
 const ResourcesSml = styled.div`
   
-  @media (min-width: 481px) {}
-  @media (min-width: 768px) {}
-  @media (min-width: 1025px) {}
-  @media (min-width: 1200px) {
+  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 768px) {}
+  @media screen and (min-width: 1025px) {}
+  @media screen and (min-width: 1200px) {
     display: none;
   }
 `
 
 const ResourcesLrg = styled.div`
   display: none;
-  @media (min-width: 481px) {}
-  @media (min-width: 768px) {}
-  @media (min-width: 1025px) {}
-  @media (min-width: 1200px) {
+  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 768px) {}
+  @media screen and (min-width: 1025px) {}
+  @media screen and (min-width: 1200px) {
     display: block
   }
 `

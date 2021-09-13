@@ -57,15 +57,15 @@ const Details = styled.div`
     line-height: 28px;
     color: var(--color-black);
   }
-  @media (min-width: 481px) {}
-  @media (min-width: 768px) {
+  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 768px) {
     margin-right: 62px;
     p {
       font-size: 16px;
     }
   }
-  @media (min-width: 1025px) {}
-  @media (min-width: 1200px) {
+  @media screen and (min-width: 1025px) {}
+  @media screen and (min-width: 1200px) {
     margin-right: 51px;
     p {
       font-size: 18px;
@@ -87,14 +87,14 @@ const Socials = styled.div`
   > *:last-child {
     margin-right: 0;
   }
-  @media (min-width: 481px) {}
-  @media (min-width: 768px) {
+  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 768px) {
     > * {
       margin-right: 5px;
     }
   }
-  @media (min-width: 1025px) {}
-  @media (min-width: 1200px) {
+  @media screen and (min-width: 1025px) {}
+  @media screen and (min-width: 1200px) {
     > * {
       margin-right: 0;
     }

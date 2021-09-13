@@ -45,19 +45,19 @@ export default LandingVideo;
 const Iframe = styled.iframe`
   height: 225.5px;
   width: 343px;
-  @media (min-width: 481px) {
+  @media screen and (min-width: 481px) {
     height: 294.7px;
     width: 448px;
   }
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     width: 678px;
     height: 446px;
   }
-  @media (min-width: 1025px) {
+  @media screen and (min-width: 1025px) {
     width: 925px;
     height: 608.5px;
   }
-  @media (min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     width: 1000px;
     height: 657.9px;
   }
@@ -70,16 +70,16 @@ const Iframe = styled.iframe`
 const Placeholder = styled.img`
   height: auto;
   width: 343px;
-  @media (min-width: 481px) {
+  @media screen and (min-width: 481px) {
     width: 448px;
   }
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     width: 678px;
   }
-  @media (min-width: 1025px) {
+  @media screen and (min-width: 1025px) {
     width: 925px;
   }
-  @media (min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     width: 1000px;
   }
   @media screen and (min-width: 1440px) {

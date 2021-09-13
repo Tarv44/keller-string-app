@@ -98,6 +98,7 @@ export const GlobalStyle = createGlobalStyle`
 
   .slick-list {
     margin-bottom: 15px;
+    width: 100%;
   }
   
   /* .slick-dots {
@@ -122,7 +123,7 @@ export const GlobalStyle = createGlobalStyle`
     opacity: 25%;
   }
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     h1 {
       font-size: 45px;
     }
@@ -147,7 +148,7 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 
-  @media (min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     h1 {
       font-size: 54px;
     }

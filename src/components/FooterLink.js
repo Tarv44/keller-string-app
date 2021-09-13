@@ -18,14 +18,14 @@ const LinkLi = styled.li`
   :last-child {
     margin-bottom: 15px;
   }
-  @media (min-width: 481px) {}
-  @media (min-width: 768px) {
+  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 768px) {
     margin-bottom: 0;
     line-height: 22px;
     :last-child {
       margin-bottom: 0;
     }
   }
-  @media (min-width: 1025px) {}
-  @media (min-width: 1200px) {}
+  @media screen and (min-width: 1025px) {}
+  @media screen and (min-width: 1200px) {}
 `

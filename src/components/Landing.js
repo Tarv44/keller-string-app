@@ -20,12 +20,12 @@ export default Landing;
 
 const LandingContainer = styled.div`
   padding: 0 0 50px;
-  @media (min-width: 481px) {}
-  @media (min-width: 768px) {
+  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 768px) {
     padding: 25px 30px 100px;
   }
-  @media (min-width: 1025px) {}
-  @media (min-width: 1200px) {
+  @media screen and (min-width: 1025px) {}
+  @media screen and (min-width: 1200px) {
     padding: 50px 100px 150px;
   }
 `

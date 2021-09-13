@@ -9,21 +9,29 @@ const Carousel = loadable(() => import('./Carousel'));
 const LandingHero = (props) => {
 
   const Card1 = (
-    <Card imgSml={'//images.ctfassets.net/j43gpj14xyuu/5fzWnG69O8uR1CSrJYHGxT/02b462416a55cc000536c180ceb0b1f8/violins-sml.png?w=800&q=50&fm=webp'} imgLrg={'//images.ctfassets.net/j43gpj14xyuu/anUshzXPB2vN0pte2SZwe/d3487255f0a7fdcf6ff0235fe5ff9feb/violins-lrg.png?w=800&q=50&fm=webp'}>
+    <Card imgSml={'//images.ctfassets.net/j43gpj14xyuu/5ahxLputQOKBTLwrHRJigD/01edb22bebdd16f70de2860acaeaa0f0/Keller_Strings_March_2021_35__1_.png?w=800&q=50&fm=webp'} imgLrg={'//images.ctfassets.net/j43gpj14xyuu/5ahxLputQOKBTLwrHRJigD/01edb22bebdd16f70de2860acaeaa0f0/Keller_Strings_March_2021_35__1_.png?w=800&q=50&fm=webp'}>
       <Container1>
         <Div1>
-          <h1>New Orleans' Violin Shop</h1>
-          <p><em>Offering professional service & sales of violin family instruments since 1975.</em></p>
-          <Btn as={Link}>Come Visit Us!</Btn>
+          <h1>Hurricane Ida Updates</h1>
+          <p><em>We are closed until further notice.</em></p>
+          <Btn as={Link}>Learn More</Btn>
         </Div1>
       </Container1>
     </Card>
   )
+  // const Card1 = (
+  //   <Card imgSml={'//images.ctfassets.net/j43gpj14xyuu/5fzWnG69O8uR1CSrJYHGxT/02b462416a55cc000536c180ceb0b1f8/violins-sml.png?w=800&q=50&fm=webp'} imgLrg={'//images.ctfassets.net/j43gpj14xyuu/anUshzXPB2vN0pte2SZwe/d3487255f0a7fdcf6ff0235fe5ff9feb/violins-lrg.png?w=800&q=50&fm=webp'}>
+  //     <Container1>
+  //       <Div1>
+  //         <h1>New Orleans' Violin Shop</h1>
+  //         <p><em>Offering professional service & sales of violin family instruments since 1975.</em></p>
+  //         <Btn as={Link}>Come Visit Us!</Btn>
+  //       </Div1>
+  //     </Container1>
+  //   </Card>
+  // )
 
   const cards = [
-    Card1,
-    Card1,
-    Card1,
     Card1,
   ]
 
@@ -34,7 +42,7 @@ const LandingHero = (props) => {
         // autoplay={true}
       />
     </Hero>
-  );
+  )
 };
 export default LandingHero;
 
@@ -43,13 +51,13 @@ const Hero = styled.div`
   position: relative;
   top: -5px;
   margin-bottom: 36px;
-  @media (min-width: 481px) {}
-  @media (min-width: 768px) {
+  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 768px) {
     padding-top: 25px;
     margin-bottom: 70px;
   }
-  @media (min-width: 1025px) {}
-  @media (min-width: 1200px) {
+  @media screen and (min-width: 1025px) {}
+  @media screen and (min-width: 1200px) {
     margin-bottom: 100px;
   }
 `
@@ -57,15 +65,16 @@ const Hero = styled.div`
 const Card = styled.div`
   background: ${props => `url(${props.imgSml}) no-repeat`};
   background-size: cover;
+  background-position: center;
   height: 475px;
-  @media (min-width: 481px) {}
-  @media (min-width: 768px) {
+  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 768px) {
     background: ${props => `url(${props.imgLrg}) no-repeat`};
     background-size: cover;
     height: 535px;
   }
-  @media (min-width: 1025px) {}
-  @media (min-width: 1200px) {
+  @media screen and (min-width: 1025px) {}
+  @media screen and (min-width: 1200px) {
     height: 624px;
   }
 `
@@ -76,12 +85,12 @@ const Container1 = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   min-height: 100%;
-  @media (min-width: 481px) {}
-  @media (min-width: 768px) {
+  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 768px) {
     padding: 0 0 25px;
   }
-  @media (min-width: 1025px) {}
-  @media (min-width: 1200px) {
+  @media screen and (min-width: 1025px) {}
+  @media screen and (min-width: 1200px) {
     padding: 25px;
   }
 `
@@ -96,8 +105,8 @@ const Div1 = styled.div`
   p{
     margin-bottom: 10px;
   }
-  @media (min-width: 481px) {}
-  @media (min-width: 768px) {
+  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 768px) {
     align-items: flex-start;
     padding: 30px 25px 25px;
     h1 {
@@ -110,8 +119,8 @@ const Div1 = styled.div`
       text-align: left;
     }
   }
-  @media (min-width: 1025px) {}
-  @media (min-width: 1200px) {
+  @media screen and (min-width: 1025px) {}
+  @media screen and (min-width: 1200px) {
     width: 800px;
     h1 {
       font-size: 50px;
@@ -121,8 +130,8 @@ const Div1 = styled.div`
 
 const Btn = styled(Button)`
   width: 250px;
-  @media (min-width: 481px) {}
-  @media (min-width: 768px) {}
-  @media (min-width: 1025px) {}
-  @media (min-width: 1200px) {}
+  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 768px) {}
+  @media screen and (min-width: 1025px) {}
+  @media screen and (min-width: 1200px) {}
 `

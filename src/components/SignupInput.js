@@ -29,17 +29,17 @@ const Form = styled.form`
     font-family: 'Libre Franklin';
     height: 40px;
   }
-  @media (min-width: 481px) {}
-  @media (min-width: 768px) {}
-  @media (min-width: 1025px) {
+  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 768px) {}
+  @media screen and (min-width: 1025px) {
   }
-  @media (min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     input,
     button {
       height: 50px;
     }
   }
-  @media (min-width: 1440px) {
+  @media screen and (min-width: 1440px) {
     width: 429px;
   }
 `
@@ -50,14 +50,14 @@ const Input = styled.input`
   border: none;
   border-radius: 5px 0 0 5px;
   padding: 0 14px;
-  @media (min-width: 481px) {}
-  @media (min-width: 768px) {}
-  @media (min-width: 1025px) {}
-  @media (min-width: 1200px) {
+  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 768px) {}
+  @media screen and (min-width: 1025px) {}
+  @media screen and (min-width: 1200px) {
     padding: 0 16px;
     font-size: 16px;
   }
-  @media (min-width: 1440px) {
+  @media screen and (min-width: 1440px) {
     width: 280px;
   }
 `
@@ -68,13 +68,13 @@ const Button = styled.button`
   background: var(--color-primary);
   color: #ffffff;
   border-radius: 0 5px 5px 0;
-  @media (min-width: 481px) {}
-  @media (min-width: 768px) {}
-  @media (min-width: 1025px) {}
-  @media (min-width: 1200px) {
+  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 768px) {}
+  @media screen and (min-width: 1025px) {}
+  @media screen and (min-width: 1200px) {
     font-size: 24px;
   }
-  @media (min-width: 1440px) {
+  @media screen and (min-width: 1440px) {
     width: 149px;
   }
 `

@@ -59,13 +59,13 @@ const Bar = styled.div`
   position: relative;
   z-index: 99;
 
-  @media (min-width: 481px) {
+  @media screen and (min-width: 481px) {
     padding: 0 25px;
   }
-  @media (min-width: 1025px) {
+  @media screen and (min-width: 1025px) {
     padding: 0 45px;
   }
-  @media (min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     padding: 0 70px;
   }
 `
@@ -76,10 +76,10 @@ const MenuButton = styled.div`
   align-items: center;
   width: 82px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     width: 104px;
   }
-  @media (min-width: 1025px) {
+  @media screen and (min-width: 1025px) {
     display: none;
   }
 `
@@ -88,16 +88,16 @@ const LogoImg = styled.img`
   height: auto;
   padding: 8px 0 11px;
 
-  @media (min-width: 481px) {
+  @media screen and (min-width: 481px) {
     width: 70px;
     padding: 8px 0 9.5px;
   }
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     width: 90px;
     padding: 10px 0 13px;
   }
 
-  @media (min-width: 1025px) {
+  @media screen and (min-width: 1025px) {
     width: 110px;
     padding: 12px 0 17px;
   }
@@ -112,7 +112,7 @@ const Icons = styled.div`
     margin-right: 0;
   }
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     > * {
       margin-right: 15px;
     }
@@ -124,21 +124,21 @@ const Icons = styled.div`
 const AccountIcon = styled.img`
   width: 20px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     width: 23px;
   }
 `
 const HeartIcon = styled.img`
   width: 20px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     width: 23px;
   }
 `
 const CartIcon = styled.img`
   width: 22px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     width: 28px;
   }
 `
