@@ -2,7 +2,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 import Layout from '../components/Layout';
-import Path from '../components/styled/path';
+import Path from '../components/styled/Path';
 
 const Contact = (props) => {
   const data = useStaticQuery(graphql`

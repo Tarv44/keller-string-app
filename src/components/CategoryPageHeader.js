@@ -1,6 +1,6 @@
 import { Link } from 'gatsby';
 import React from 'react';
-import Path from './styled/path';
+import Path from './styled/Path';
 import InfoSVG from '../images/info-icon.svg';
 import styled from 'styled-components';
 

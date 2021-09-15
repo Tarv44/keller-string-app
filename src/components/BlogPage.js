@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Path from './styled/path';
+import Path from './styled/Path';
 
 const BlogPage = (props) => {
   const {
