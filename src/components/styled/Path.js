@@ -5,9 +5,9 @@ import styled from 'styled-components';
 const Path = ({linkData, title}) => {
   const links = linkData.map((l, i) => {
     if (i === linkData.length-1) {
-      return <span>{l.label}</span>
+      return <span key={i}>{l.label}</span>
     } else {
-      return <span><Link to={l.path}>{l.label}</Link> / </span>
+      return <span key={i}><Link to={l.path}>{l.label}</Link> / </span>
     }
   })
   return (

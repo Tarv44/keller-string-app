@@ -2,10 +2,9 @@ import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import loadable from '@loadable/component';
-const Button = loadable(() => import('./styled/Button'));
+import Button from './styled/Button';
 
 const SubmenuSidebarShop = (props) => {
-  console.log(props.test)
   return (
     <>
       <Inventory>
@@ -13,7 +12,7 @@ const SubmenuSidebarShop = (props) => {
         <div>
           <InvItems>
             <li>
-              <Link>Instruments</Link>
+              <Link to='/instrument-categories'>Instruments</Link>
             </li>
             <li>
               <Link>Accesories</Link>
@@ -58,7 +57,6 @@ export default SubmenuSidebarShop;
 
 const Inventory = styled.div`
   border-bottom: 1px solid rgba(118, 130, 142, 0.4);
-
   p > a {
     text-decoration: underline;
   }

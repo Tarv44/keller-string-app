@@ -23,6 +23,7 @@ const SubmenuSidebar = ({selected, setSelected}) => {
 export default SubmenuSidebar;
 
 const Submenu = styled.div`
+  text-align: left;
   h3 {
     font-weight: 700;
     font-size: 18px;
