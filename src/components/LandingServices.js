@@ -1,15 +1,14 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 import { useStaticQuery, graphql } from "gatsby";
-import { Link } from 'gatsby';
-import loadable from '@loadable/component';
-const Hr = loadable(() => import( './styled/Hr'));
-const Button = loadable(() => import( './styled/Button'));
+import { Link } from "gatsby";
+import Hr from "./styled/Hr";
+import Button from "./styled/Button";
 
 const LandingServices = (props) => {
   const ImageQuery = useStaticQuery(graphql`
     query ImageQuery {
-      shop: contentfulAsset(contentful_id: {eq: "3ZLNg9XjelFEypzJ1LsTrj"}) {
+      shop: contentfulAsset(contentful_id: { eq: "3ZLNg9XjelFEypzJ1LsTrj" }) {
         fluid {
           srcWebp
           srcSetWebp
@@ -17,7 +16,7 @@ const LandingServices = (props) => {
           src
         }
       }
-      rent: contentfulAsset(contentful_id: {eq: "3bY02gudHBY8QQCEeGn4mv"}) {
+      rent: contentfulAsset(contentful_id: { eq: "3bY02gudHBY8QQCEeGn4mv" }) {
         fluid {
           srcWebp
           srcSetWebp
@@ -25,7 +24,7 @@ const LandingServices = (props) => {
           src
         }
       }
-      repair: contentfulAsset(contentful_id: {eq: "4x7lAEDh1nKeKDo2wJQjoF"}) {
+      repair: contentfulAsset(contentful_id: { eq: "4x7lAEDh1nKeKDo2wJQjoF" }) {
         fluid {
           srcWebp
           srcSetWebp
@@ -34,44 +33,74 @@ const LandingServices = (props) => {
         }
       }
     }
-  `)
-  console.log(ImageQuery)
-  const ShopImg = ImageQuery.shop.fluid
-  const RentImg = ImageQuery.rent.fluid
-  const RepairImg = ImageQuery.repair.fluid
+  `);
+  console.log(ImageQuery);
+  const ShopImg = ImageQuery.shop.fluid;
+  const RentImg = ImageQuery.rent.fluid;
+  const RepairImg = ImageQuery.repair.fluid;
   return (
     <Services>
       <h2>What Can We Help You With?</h2>
       <Cards>
         <Card>
           <picture>
-            <source srcSet={ShopImg.srcSetWebp} type='image/webp'/>
-            <source srcSet={ShopImg.srcSet} type='image/png'/>
-            <img width={200} height={200} src={ShopImg.src} alt="Base of Violin" />
+            <source srcSet={ShopImg.srcSetWebp} type="image/webp" />
+            <source srcSet={ShopImg.srcSet} type="image/png" />
+            <img
+              width={200}
+              height={200}
+              src={ShopImg.src}
+              alt="Base of Violin"
+            />
           </picture>
           <h4>Shop</h4>
-          <p>Wherever you are, be a New Orleanian! Bring the experience of our violin shop to your home! </p>
-          <Button disabled={true} as={Link}>Shop Now</Button>
+          <p>
+            Wherever you are, be a New Orleanian! Bring the experience of our
+            violin shop to your home!{" "}
+          </p>
+          <Button disabled={true} as={Link}>
+            Shop Now
+          </Button>
         </Card>
         <Card>
           <picture>
-            <source srcSet={RentImg.srcSetWebp} type='image/webp'/>
-            <source srcSet={RentImg.srcSet} type='image/png'/>
-            <img width={200} height={200} src={RentImg.src} alt="Man helping child pick violin" />
+            <source srcSet={RentImg.srcSetWebp} type="image/webp" />
+            <source srcSet={RentImg.srcSet} type="image/png" />
+            <img
+              width={200}
+              height={200}
+              src={RentImg.src}
+              alt="Man helping child pick violin"
+            />
           </picture>
           <h4>Rent</h4>
-          <p>Optimal quality & terrific value to ensure that you or your child has an ideal playing experience!</p>
-          <Button disabled={true} as={Link}>Rent Today</Button>
+          <p>
+            Optimal quality & terrific value to ensure that you or your child
+            has an ideal playing experience!
+          </p>
+          <Button disabled={true} as={Link}>
+            Rent Today
+          </Button>
         </Card>
         <Card>
           <picture>
-            <source srcSet={RepairImg.srcSetWebp} type='image/webp'/>
-            <source srcSet={RepairImg.srcSet} type='image/png'/>
-            <img width={200} height={200} src={RepairImg.src} alt="Pieces of violin" />
+            <source srcSet={RepairImg.srcSetWebp} type="image/webp" />
+            <source srcSet={RepairImg.srcSet} type="image/png" />
+            <img
+              width={200}
+              height={200}
+              src={RepairImg.src}
+              alt="Pieces of violin"
+            />
           </picture>
           <h4>Repair</h4>
-          <RepairP>All restorations & repairs are performed by in-house Luthiers with over 30 years of experience.</RepairP>
-          <Button disabled={true} as={Link}>Schedule a Service</Button>
+          <RepairP>
+            All restorations & repairs are performed by in-house Luthiers with
+            over 30 years of experience.
+          </RepairP>
+          <Button disabled={true} as={Link}>
+            Schedule a Service
+          </Button>
         </Card>
       </Cards>
       <Hr />
@@ -89,13 +118,16 @@ const Services = styled.div`
   h2 {
     margin-bottom: 25px;
   }
-  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 481px) {
+  }
   @media screen and (min-width: 768px) {
     margin-bottom: 100px;
   }
-  @media screen and (min-width: 1025px) {}
-  @media screen and (min-width: 1200px) {}
-`
+  @media screen and (min-width: 1025px) {
+  }
+  @media screen and (min-width: 1200px) {
+  }
+`;
 
 const Cards = styled.div`
   display: flex;
@@ -107,15 +139,18 @@ const Cards = styled.div`
   > div:last-child {
     margin-bottom: 0;
   }
-  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 481px) {
+  }
   @media screen and (min-width: 768px) {
     justify-content: space-between;
     flex-direction: row;
     margin-bottom: 0;
   }
-  @media screen and (min-width: 1025px) {}
-  @media screen and (min-width: 1200px) {}
-`
+  @media screen and (min-width: 1025px) {
+  }
+  @media screen and (min-width: 1200px) {
+  }
+`;
 
 const Card = styled.div`
   display: flex;
@@ -134,9 +169,11 @@ const Card = styled.div`
     margin-bottom: 15px;
     font-weight: 500;
   }
-  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 481px) {
+  }
   @media screen and (min-width: 768px) {
-    p, a {
+    p,
+    a {
       width: 200px;
     }
     p {
@@ -144,28 +181,34 @@ const Card = styled.div`
     }
   }
   @media screen and (min-width: 1025px) {
-    p, a, img {
+    p,
+    a,
+    img {
       width: 250px;
     }
   }
   @media screen and (min-width: 1200px) {
     height: 514px;
     justify-content: space-between;
-    p, a, img {
+    p,
+    a,
+    img {
       width: 300px;
     }
     p {
       font-size: 20px;
     }
   }
-`
+`;
 
 const RepairP = styled.p`
-  
-  @media screen and (min-width: 481px) {}
-  @media screen and (min-width: 768px) {}
-  @media screen and (min-width: 1025px) {}
+  @media screen and (min-width: 481px) {
+  }
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1025px) {
+  }
   @media screen and (min-width: 1200px) {
     font-size: 19px !important;
   }
-`
+`;

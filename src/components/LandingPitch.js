@@ -1,28 +1,30 @@
-import React, {Suspense} from 'react';
-import styled from 'styled-components';
-import {Link as GLink} from 'gatsby';
-import loadable from '@loadable/component';
-import Button from './styled/Button';
-const LandingVideo = React.lazy(() => import('./LandingVideo'));
-const Carousel = loadable(() => import('./Carousel'));
-const Hr = loadable(() => import('./styled/Hr'));
-const Link = loadable(() => import('./styled/Link'));
+import React, { Suspense } from "react";
+import styled from "styled-components";
+import { Link as GLink } from "gatsby";
+import Button from "./styled/Button";
+import LandingVideo from "./LandingVideo";
+import Carousel from "./Carousel";
+import Hr from "./styled/Hr";
 
 const LandingPitch = (props) => {
   const Card1 = (
     <Card>
       <Container1>
         <CardH2>Hurricane Ida Updates</CardH2>
-        <p>Due to Hurricane Ida, and the massive power outage, Keller Strings will remain closed until further notice. Please watch our social media & website for progress and information. Stay safe y’all.</p>
+        <p>
+          Due to Hurricane Ida, and the massive power outage, Keller Strings
+          will remain closed until further notice. Please watch our social media
+          & website for progress and information. Stay safe y’all.
+        </p>
         <Btn as={GLink}>Learn More</Btn>
       </Container1>
     </Card>
-  )
+  );
   const Card2 = (
     <Card>
       <Container1>
-        <CardH2>Please Remember That As Of February <
-          Year1>‘21</Year1>
+        <CardH2>
+          Please Remember That As Of February <Year1>‘21</Year1>
           <Year2>'21...</Year2>
           <Year3>2021...</Year3>
         </CardH2>
@@ -30,11 +32,8 @@ const LandingPitch = (props) => {
         <Btn as={GLink}>Learn More</Btn>
       </Container1>
     </Card>
-  )
-  const cards = [
-    Card1,
-    Card2,
-  ]
+  );
+  const cards = [Card1, Card2];
   return (
     <Pitch>
       <h2>Trust Us With Your String Needs</h2>
@@ -48,11 +47,9 @@ const LandingPitch = (props) => {
       <CovidP>Learn all about our COVID precautions <Link>here</Link>.</CovidP>
       <Hr style={{marginBottom: 50}}/> */}
       <CarouselContainer>
-        <Carousel 
-          cards={cards}
-        />
+        <Carousel cards={cards} />
       </CarouselContainer>
-      <Hr style={{marginBottom: 50}}/>
+      <Hr style={{ marginBottom: 50 }} />
     </Pitch>
   );
 };
@@ -66,47 +63,54 @@ const Pitch = styled.div`
     color: var(--color-primary);
     margin-bottom: 20px;
   }
-  @media screen and (min-width: 481px) {}
-  @media screen and (min-width: 768px) {}
-  @media screen and (min-width: 1025px) {}
+  @media screen and (min-width: 481px) {
+  }
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1025px) {
+  }
   @media screen and (min-width: 1200px) {
     h3 {
       font-size: 26px;
     }
   }
-`
+`;
 
 const IframeContainer = styled.div`
   width: 100%;
   margin-bottom: 50px;
-  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 481px) {
+  }
   @media screen and (min-width: 768px) {
     margin-bottom: 70.5px;
   }
-  @media screen and (min-width: 1025px) {}
+  @media screen and (min-width: 1025px) {
+  }
   @media screen and (min-width: 1200px) {
     margin-bottom: 69px;
   }
-`
+`;
 
-const CovidP = styled.p`
-  border-top: 4px solid var(--color-primary);
-  border-bottom: 4px solid var(--color-primary);
-  margin: 0 52.5px 35px;
-  padding: 15px 20px;
-  font-size: 18px;
-  text-transform: capitalize;
-  @media screen and (min-width: 481px) {}
-  @media screen and (min-width: 768px) {
-    font-size: 22px;
-    margin: 0 35px 70px;
-  }
-  @media screen and (min-width: 1025px) {}
-  @media screen and (min-width: 1200px) {
-    font-size: 28px;
-    margin: 0 120px 70px;
-  }
-`
+// const CovidP = styled.p`
+//   border-top: 4px solid var(--color-primary);
+//   border-bottom: 4px solid var(--color-primary);
+//   margin: 0 52.5px 35px;
+//   padding: 15px 20px;
+//   font-size: 18px;
+//   text-transform: capitalize;
+//   @media screen and (min-width: 481px) {
+//   }
+//   @media screen and (min-width: 768px) {
+//     font-size: 22px;
+//     margin: 0 35px 70px;
+//   }
+//   @media screen and (min-width: 1025px) {
+//   }
+//   @media screen and (min-width: 1200px) {
+//     font-size: 28px;
+//     margin: 0 120px 70px;
+//   }
+// `;
 const CarouselContainer = styled.div`
   padding: 0 29.5px;
   margin-bottom: 50px;
@@ -117,7 +121,8 @@ const CarouselContainer = styled.div`
     margin-bottom: 12px;
     font-weight: 500;
   }
-  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 481px) {
+  }
   @media screen and (min-width: 768px) {
     h2 {
       margin-bottom: 12px;
@@ -126,88 +131,108 @@ const CarouselContainer = styled.div`
       margin-bottom: 10px;
     }
   }
-  @media screen and (min-width: 1025px) {}
+  @media screen and (min-width: 1025px) {
+  }
   @media screen and (min-width: 1200px) {
     p {
       margin-bottom: 15px;
     }
   }
-`
+`;
 
 const Card = styled.div`
   background: var(--color-grey-1);
   padding: 25px;
-  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 481px) {
+  }
   @media screen and (min-width: 768px) {
     padding: 25px 40px;
   }
-  @media screen and (min-width: 1025px) {}
+  @media screen and (min-width: 1025px) {
+  }
   @media screen and (min-width: 1200px) {
     padding: 30px 40px;
   }
-`
+`;
 
 const CardH2 = styled.h2`
   font-size: 26px;
   text-transform: uppercase;
   color: var(--color-primary);
-  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 481px) {
+  }
   @media screen and (min-width: 768px) {
     font-size: 32px;
   }
-  @media screen and (min-width: 1025px) {}
+  @media screen and (min-width: 1025px) {
+  }
   @media screen and (min-width: 1200px) {
     font-size: 40px;
   }
-`
+`;
 
 const Container1 = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media screen and (min-width: 481px) {}
-  @media screen and (min-width: 768px) {}
-  @media screen and (min-width: 1025px) {}
-  @media screen and (min-width: 1200px) {}
-`
+  @media screen and (min-width: 481px) {
+  }
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1025px) {
+  }
+  @media screen and (min-width: 1200px) {
+  }
+`;
 
 const Btn = styled(Button)`
-  @media screen and (min-width: 481px) {}
-  @media screen and (min-width: 768px) {}
-  @media screen and (min-width: 1025px) {}
+  @media screen and (min-width: 481px) {
+  }
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1025px) {
+  }
   @media screen and (min-width: 1200px) {
     width: 171px;
   }
-`
+`;
 
 const Year1 = styled.span`
   display: inline;
-  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 481px) {
+  }
   @media screen and (min-width: 768px) {
     display: none;
   }
-  @media screen and (min-width: 1025px) {}
-  @media screen and (min-width: 1200px) {}
-`
+  @media screen and (min-width: 1025px) {
+  }
+  @media screen and (min-width: 1200px) {
+  }
+`;
 
 const Year2 = styled.span`
   display: none;
-  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 481px) {
+  }
   @media screen and (min-width: 768px) {
     display: inline;
   }
-  @media screen and (min-width: 1025px) {}
+  @media screen and (min-width: 1025px) {
+  }
   @media screen and (min-width: 1200px) {
     display: none;
   }
-`
+`;
 
 const Year3 = styled.span`
   display: none;
-  @media screen and (min-width: 481px) {}
-  @media screen and (min-width: 768px) {}
-  @media screen and (min-width: 1025px) {}
+  @media screen and (min-width: 481px) {
+  }
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1025px) {
+  }
   @media screen and (min-width: 1200px) {
     display: inline;
   }
-`
+`;

@@ -1,37 +1,36 @@
-import React, { useEffect, useState } from 'react';
-import loadable from '@loadable/component';
-import styled from 'styled-components';
-const AlertBar = loadable(() => import('./AlertBar'));
-const MenuBar = loadable(() => import('./MenuBar'));
-const SubmenuDropdown = loadable(() => import('./SubmenuDropdown'));
-const MenuSidebar = loadable(() => import('./MenuSidebar'));
+import React, { useEffect, useState } from "react";
+import styled from "styled-components";
+import AlertBar from "./AlertBar";
+import MenuBar from "./MenuBar";
+import SubmenuDropdown from "./SubmenuDropdown";
+import MenuSidebar from "./MenuSidebar";
 
 const Header = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(false)
-  const [selectedDropdown, setSelectedDropdown] = useState(null)
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [selectedDropdown, setSelectedDropdown] = useState(null);
 
   useEffect(() => {
     if (!!selectedDropdown) setSidebarOpen(false);
-  }, [selectedDropdown])
+  }, [selectedDropdown]);
 
   useEffect(() => {
     if (sidebarOpen) setSelectedDropdown(null);
-  }, [sidebarOpen])
+  }, [sidebarOpen]);
 
   return (
     <HeaderTag>
       <AlertBar />
-      <MenuBar 
-        sidebarOpen={sidebarOpen} 
-        setSidebarOpen={setSidebarOpen} 
+      <MenuBar
+        sidebarOpen={sidebarOpen}
+        setSidebarOpen={setSidebarOpen}
         selectedDropdown={selectedDropdown}
         setSelectedDropdown={setSelectedDropdown}
       />
       {!!selectedDropdown && <SubmenuDropdown selected={selectedDropdown} />}
       <MenuSidebar sidebarOpen={sidebarOpen} />
     </HeaderTag>
-  )
-}
+  );
+};
 
 export default Header;
 
@@ -39,8 +38,12 @@ const HeaderTag = styled.header`
   display: flex;
   flex-direction: column;
   position: relative;
-  @media screen and (min-width: 481px) {}
-  @media screen and (min-width: 768px) {}
-  @media screen and (min-width: 1025px) {}
-  @media screen and (min-width: 1200px) {}
-`
+  @media screen and (min-width: 481px) {
+  }
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1025px) {
+  }
+  @media screen and (min-width: 1200px) {
+  }
+`;

@@ -1,37 +1,41 @@
-import React from 'react';
-import { Link } from 'gatsby';
-import Logo from '../images/logo.png';
-import Logo2x from '../images/logo@2x.png';
-import Logo3x from '../images/logo@3x.png';
-import Hamburger from '../images/hamburger.png';
-import Close from '../images/close.png';
-import Cart from '../images/cart.png';
-import Heart from '../images/heart.png';
-import Account from '../images/account.png';
-import styled from 'styled-components';
-import loadable from '@loadable/component';
-const MenuDropdownTabs = loadable(() => import('./MenuDropdownTabs'));
+import React from "react";
+import { Link } from "gatsby";
+import Logo from "../images/logo.png";
+import Logo2x from "../images/logo@2x.png";
+import Logo3x from "../images/logo@3x.png";
+import Hamburger from "../images/hamburger.png";
+import Close from "../images/close.png";
+// import Cart from '../images/cart.png';
+// import Heart from '../images/heart.png';
+// import Account from '../images/account.png';
+import styled from "styled-components";
+import MenuDropdownTabs from "./MenuDropdownTabs";
 
 const MenuBar = (props) => {
   return (
     <Bar>
       <MenuButton>
         <button onClick={() => props.setSidebarOpen(!props.sidebarOpen)}>
-          {!props.sidebarOpen && <img width={22} height={17.5} src={Hamburger} alt="Menu Icon" />}
-          {props.sidebarOpen && <img width={18} height={18} src={Close} alt="Close Menu Icon" />}
+          {!props.sidebarOpen && (
+            <img width={22} height={17.5} src={Hamburger} alt="Menu Icon" />
+          )}
+          {props.sidebarOpen && (
+            <img width={18} height={18} src={Close} alt="Close Menu Icon" />
+          )}
         </button>
       </MenuButton>
-      <Link to='/'>
-        <LogoImg 
-          width={50} 
-          height={41.13} 
+      <Link to="/">
+        <LogoImg
+          width={50}
+          height={41.13}
           src={Logo}
-          srcSet={`${Logo} 50w, ${Logo2x} 100w, ${Logo3x} 150w`} 
-          alt="Keller Strings Logo"/>
+          srcSet={`${Logo} 50w, ${Logo2x} 100w, ${Logo3x} 150w`}
+          alt="Keller Strings Logo"
+        />
       </Link>
-      <MenuDropdownTabs 
-        selected={props.selectedDropdown} 
-        setSelected={props.setSelectedDropdown} 
+      <MenuDropdownTabs
+        selected={props.selectedDropdown}
+        setSelected={props.setSelectedDropdown}
       />
       {/* <Icons>
         <Link>
@@ -70,7 +74,7 @@ const Bar = styled.div`
   @media screen and (min-width: 1200px) {
     padding: 0 70px;
   }
-`
+`;
 
 const MenuButton = styled.div`
   display: flex;
@@ -84,7 +88,7 @@ const MenuButton = styled.div`
   @media screen and (min-width: 1025px) {
     display: none;
   }
-`
+`;
 const LogoImg = styled.img`
   width: 50px;
   height: auto;
@@ -103,44 +107,44 @@ const LogoImg = styled.img`
     width: 110px;
     padding: 12px 0 17px;
   }
-`
-const Icons = styled.div`
-  display: flex;
-  align-items: center;
-  > * {
-    margin-right: 10px;
-  }
-  > *:last-child {
-    margin-right: 0;
-  }
+`;
+// const Icons = styled.div`
+//   display: flex;
+//   align-items: center;
+//   > * {
+//     margin-right: 10px;
+//   }
+//   > *:last-child {
+//     margin-right: 0;
+//   }
 
-  @media screen and (min-width: 768px) {
-    > * {
-      margin-right: 15px;
-    }
-    > *:last-child {
-      margin-right: 0;
-    }
-  }
-`
-const AccountIcon = styled.img`
-  width: 20px;
+//   @media screen and (min-width: 768px) {
+//     > * {
+//       margin-right: 15px;
+//     }
+//     > *:last-child {
+//       margin-right: 0;
+//     }
+//   }
+// `;
+// const AccountIcon = styled.img`
+//   width: 20px;
 
-  @media screen and (min-width: 768px) {
-    width: 23px;
-  }
-`
-const HeartIcon = styled.img`
-  width: 20px;
+//   @media screen and (min-width: 768px) {
+//     width: 23px;
+//   }
+// `;
+// const HeartIcon = styled.img`
+//   width: 20px;
 
-  @media screen and (min-width: 768px) {
-    width: 23px;
-  }
-`
-const CartIcon = styled.img`
-  width: 22px;
+//   @media screen and (min-width: 768px) {
+//     width: 23px;
+//   }
+// `;
+// const CartIcon = styled.img`
+//   width: 22px;
 
-  @media screen and (min-width: 768px) {
-    width: 28px;
-  }
-`
+//   @media screen and (min-width: 768px) {
+//     width: 28px;
+//   }
+// `;

@@ -1,11 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 import { useStaticQuery, graphql } from "gatsby";
-import Carousel from './Carousel';
-import loadable from '@loadable/component';
-const Hr = loadable(() => import('./styled/Hr'));
-const Button = loadable(() => import('./styled/Button'));
-// const Carousel = loadable(() => import('./Carousel'));
+import Carousel from "./Carousel";
+import Hr from "./styled/Hr";
+import Button from "./styled/Button";
 
 const LandingRecs = (props) => {
   const data = useStaticQuery(graphql`
@@ -51,33 +49,38 @@ const LandingRecs = (props) => {
         }
       }
     }
-  `)
+  `);
 
-  const cards = Object.values(data.contentfulHomePageRecommendations).map((r, i) => {
-    return (
-      <Card key={i}>
-        <div>
-          <picture>
-            <source srcSet={r.image.fluid.srcSetWebp} type="image/webp" />
-            <source srcSet={r.image.fluid.srcSet} type="image/png" />
-            <img width={250} height={250} src={r.image.fluid.src} alt={r.title}/>
-          </picture>
-          <h3>{r.title}</h3>
-          <p>{r.desc}</p>
-        </div>
-        <Button disabled={true}>Learn More</Button>
-      </Card>
-    )
-  })
+  const cards = Object.values(data.contentfulHomePageRecommendations).map(
+    (r, i) => {
+      return (
+        <Card key={i}>
+          <div>
+            <picture>
+              <source srcSet={r.image.fluid.srcSetWebp} type="image/webp" />
+              <source srcSet={r.image.fluid.srcSet} type="image/png" />
+              <img
+                width={250}
+                height={250}
+                src={r.image.fluid.src}
+                alt={r.title}
+              />
+            </picture>
+            <h3>{r.title}</h3>
+            <p>{r.desc}</p>
+          </div>
+          <Button disabled={true}>Learn More</Button>
+        </Card>
+      );
+    }
+  );
   return (
     <Recs>
       <h2>What We Like Right Now</h2>
       <CarouselContainer>
-        <Carousel redArrow={true} cards={cards}/>
+        <Carousel redArrow={true} cards={cards} />
       </CarouselContainer>
-      <GalleryContainer>
-        {cards}
-      </GalleryContainer>
+      <GalleryContainer>{cards}</GalleryContainer>
       <Hr />
     </Recs>
   );
@@ -89,34 +92,44 @@ const Recs = styled.div`
   h2 {
     margin-bottom: 25px;
   }
-  @media screen and (min-width: 481px) {}
-  @media screen and (min-width: 768px) {}
-  @media screen and (min-width: 1025px) {}
-  @media screen and (min-width: 1200px) {}
-`
+  @media screen and (min-width: 481px) {
+  }
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1025px) {
+  }
+  @media screen and (min-width: 1200px) {
+  }
+`;
 
 const CarouselContainer = styled.div`
   padding: 0 33.5px;
   display: block;
   margin-bottom: 65px;
-  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 481px) {
+  }
   @media screen and (min-width: 768px) {
     display: none;
   }
-  @media screen and (min-width: 1025px) {}
-  @media screen and (min-width: 1200px) {}
-`
+  @media screen and (min-width: 1025px) {
+  }
+  @media screen and (min-width: 1200px) {
+  }
+`;
 
 const GalleryContainer = styled.div`
   display: none;
-  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 481px) {
+  }
   @media screen and (min-width: 768px) {
     display: flex;
     justify-content: space-around;
   }
-  @media screen and (min-width: 1025px) {}
-  @media screen and (min-width: 1200px) {}
-`
+  @media screen and (min-width: 1025px) {
+  }
+  @media screen and (min-width: 1200px) {
+  }
+`;
 
 const Card = styled.div`
   max-width: 250px;
@@ -137,8 +150,9 @@ const Card = styled.div`
   p {
     margin-bottom: 20px;
     font-weight: 500;
-  } 
-  @media screen and (min-width: 481px) {}
+  }
+  @media screen and (min-width: 481px) {
+  }
   @media screen and (min-width: 768px) {
     max-width: 200px;
     height: 460.8px;
@@ -146,7 +160,7 @@ const Card = styled.div`
       width: 200px;
     }
     h3 {
-      font-size:18px;
+      font-size: 18px;
     }
     p {
       font-size: 16px;
@@ -159,7 +173,7 @@ const Card = styled.div`
       width: 250px;
     }
     h3 {
-      font-size:21px;
+      font-size: 21px;
     }
     p {
       font-size: 18px;
@@ -182,4 +196,4 @@ const Card = styled.div`
       width: 300px;
     }
   }
-`
+`;

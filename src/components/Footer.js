@@ -1,19 +1,15 @@
-import React from 'react';
-import styled from 'styled-components';
-import loadable from '@loadable/component';
-import footerData from '../data/footer-nav-data';
-const FooterDropdown = loadable(() => import('./FooterDropdown'));
-const FooterStoreDetails = loadable(() => import('./FooterStoreDetails'));
-const FooterNav = loadable(() => import('./FooterNav'));
-const SignupInput = loadable(() => import('./SignupInput'));
+import React from "react";
+import styled from "styled-components";
+import footerData from "../data/footer-nav-data";
+import FooterDropdown from "./FooterDropdown";
+import FooterStoreDetails from "./FooterStoreDetails";
+import FooterNav from "./FooterNav";
+import SignupInput from "./SignupInput";
 
 const Footer = (props) => {
   const dropdowns = Object.entries(footerData).map((f, i) => (
-    <FooterDropdown 
-      title={f[0]}
-      links={f[1]}
-    />
-  ))
+    <FooterDropdown title={f[0]} links={f[1]} />
+  ));
   return (
     <Ftr>
       <FooterContainer>
@@ -26,14 +22,10 @@ const Footer = (props) => {
             </div>
             <SignupInput />
           </Signup>
-          <Dropdowns>
-            {dropdowns}
-          </Dropdowns>
-          <FooterNav 
-            data={footerData}
-          />
+          <Dropdowns>{dropdowns}</Dropdowns>
+          <FooterNav data={footerData} />
         </NavSection>
-        <FooterStoreDetails/>
+        <FooterStoreDetails />
       </FooterContainer>
     </Ftr>
   );
@@ -46,26 +38,33 @@ const Ftr = styled.footer`
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media screen and (min-width: 481px) {}
-  @media screen and (min-width: 768px) {}
-  @media screen and (min-width: 1025px) {}
-  @media screen and (min-width: 1200px) {}
-`
+  @media screen and (min-width: 481px) {
+  }
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1025px) {
+  }
+  @media screen and (min-width: 1200px) {
+  }
+`;
 
 const FooterContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 360px;
-  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 481px) {
+  }
   @media screen and (min-width: 768px) {
     flex-direction: row-reverse;
     justify-content: center;
     width: 100%;
   }
-  @media screen and (min-width: 1025px) {}
-  @media screen and (min-width: 1200px) {}
-`
+  @media screen and (min-width: 1025px) {
+  }
+  @media screen and (min-width: 1200px) {
+  }
+`;
 const Signup = styled.div`
   margin-bottom: 35px;
   display: flex;
@@ -83,9 +82,11 @@ const Signup = styled.div`
   div {
     margin-bottom: 15px;
   }
-  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 481px) {
+  }
   @media screen and (min-width: 768px) {
-    h3, p {
+    h3,
+    p {
       text-align: left;
     }
     div {
@@ -94,7 +95,8 @@ const Signup = styled.div`
     align-items: flex-start;
     margin-bottom: 27px;
   }
-  @media screen and (min-width: 1025px) {}
+  @media screen and (min-width: 1025px) {
+  }
   @media screen and (min-width: 1200px) {
     flex-direction: row;
     align-items: center;
@@ -114,24 +116,30 @@ const Signup = styled.div`
       font-size: 24px;
     }
   }
-`
+`;
 
 const NavSection = styled.div`
   margin-bottom: 35px;
-  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 481px) {
+  }
   @media screen and (min-width: 768px) {
     margin-bottom: 0;
   }
-  @media screen and (min-width: 1025px) {}
-  @media screen and (min-width: 1200px) {}
-`
+  @media screen and (min-width: 1025px) {
+  }
+  @media screen and (min-width: 1200px) {
+  }
+`;
 
 const Dropdowns = styled.div`
   border-bottom: 0.75px solid rgba(118, 130, 142, 0.8);
-  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 481px) {
+  }
   @media screen and (min-width: 768px) {
     display: none;
   }
-  @media screen and (min-width: 1025px) {}
-  @media screen and (min-width: 1200px) {}
-`
+  @media screen and (min-width: 1025px) {
+  }
+  @media screen and (min-width: 1200px) {
+  }
+`;

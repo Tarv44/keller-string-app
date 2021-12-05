@@ -1,8 +1,7 @@
-import React from 'react';
-import { Link } from 'gatsby';
-import styled from 'styled-components';
-import loadable from '@loadable/component';
-import Button from './styled/Button';
+import React from "react";
+import { Link } from "gatsby";
+import styled from "styled-components";
+import Button from "./styled/Button";
 
 const SubmenuSidebarShop = (props) => {
   return (
@@ -12,7 +11,7 @@ const SubmenuSidebarShop = (props) => {
         <div>
           <InvItems>
             <li>
-              <Link to='/instrument-categories'>Instruments</Link>
+              <Link to="/instrument-categories">Instruments</Link>
             </li>
             <li>
               <Link>Accesories</Link>
@@ -30,7 +29,13 @@ const SubmenuSidebarShop = (props) => {
               <Link>Gifts</Link>
             </li>
           </InvItems>
-          <p>Learn more about the <a href='www.google.com' target='_blank' rel='noreferrer' >product lines</a> we offer. </p>
+          <p>
+            Learn more about the{" "}
+            <a href="www.google.com" target="_blank" rel="noreferrer">
+              product lines
+            </a>{" "}
+            we offer.{" "}
+          </p>
         </div>
       </Inventory>
       <Cta>
@@ -48,7 +53,9 @@ const SubmenuSidebarShop = (props) => {
             </li>
           </ul>
         </div>
-        <Btn as={Link} to={'/cart'}>Schedule a Visit</Btn>
+        <Btn as={Link} to={"/cart"}>
+          Schedule a Visit
+        </Btn>
       </Cta>
     </>
   );
@@ -60,11 +67,15 @@ const Inventory = styled.div`
   p > a {
     text-decoration: underline;
   }
-  @media screen and (min-width: 481px) {}
-  @media screen and (min-width: 768px) {}
-  @media screen and (min-width: 1025px) {}
-  @media screen and (min-width: 1200px) {}
-`
+  @media screen and (min-width: 481px) {
+  }
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1025px) {
+  }
+  @media screen and (min-width: 1200px) {
+  }
+`;
 
 const InvItems = styled.ul`
   display: flex;
@@ -74,26 +85,38 @@ const InvItems = styled.ul`
     width: 50%;
     margin: 0 0 15px;
   }
-  @media screen and (min-width: 481px) {}
-  @media screen and (min-width: 768px) {}
-  @media screen and (min-width: 1025px) {}
-  @media screen and (min-width: 1200px) {}
-`
+  @media screen and (min-width: 481px) {
+  }
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1025px) {
+  }
+  @media screen and (min-width: 1200px) {
+  }
+`;
 
 const Cta = styled.div`
   li {
     margin: 0 0 15px;
   }
-  @media screen and (min-width: 481px) {}
-  @media screen and (min-width: 768px) {}
-  @media screen and (min-width: 1025px) {}
-  @media screen and (min-width: 1200px) {}
-`
+  @media screen and (min-width: 481px) {
+  }
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1025px) {
+  }
+  @media screen and (min-width: 1200px) {
+  }
+`;
 
 const Btn = styled(Button)`
   padding: 7px 57.5px;
-  @media screen and (min-width: 481px) {}
-  @media screen and (min-width: 768px) {}
-  @media screen and (min-width: 1025px) {}
-  @media screen and (min-width: 1200px) {}
-`
+  @media screen and (min-width: 481px) {
+  }
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1025px) {
+  }
+  @media screen and (min-width: 1200px) {
+  }
+`;
