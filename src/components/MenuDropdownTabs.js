@@ -1,28 +1,24 @@
-import React from 'react';
-import styled from 'styled-components';
-import data from '../data/MenuData';
-import {AiFillCaretDown, AiFillCaretUp} from 'react-icons/ai';
+import React from "react";
+import styled from "styled-components";
+import data from "../data/MenuData";
+import { AiFillCaretDown, AiFillCaretUp } from "react-icons/ai";
 
-const MenuDropdownTabs = ({selected, setSelected}) => {
+const MenuDropdownTabs = ({ selected, setSelected }) => {
   const tabs = data.map((t, i) => {
-    const isSelected = !!selected && selected.label === t.label
+    const isSelected = !!selected && selected.label === t.label;
     const handleSelect = () => {
-      if (isSelected) setSelected(null)
-      else setSelected(t)
-    }
+      if (isSelected) setSelected(null);
+      else setSelected(t);
+    };
     return (
       <Tab key={i} isSelected={isSelected} onClick={handleSelect}>
         <span>{t.label}</span>
         {!isSelected && <AiFillCaretDown size={16} />}
         {isSelected && <AiFillCaretUp size={16} />}
       </Tab>
-    )
-  })
-  return (
-    <Tabs>
-      {tabs}
-    </Tabs>
-  );
+    );
+  });
+  return <Tabs>{tabs}</Tabs>;
 };
 
 export default MenuDropdownTabs;
@@ -33,27 +29,29 @@ const Tabs = styled.div`
   min-height: 100%;
   align-items: stretch;
 
-  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 481px) {
+  }
 
   @media screen and (min-width: 1025px) {
     display: flex;
   }
-`
-
+`;
 
 const Tab = styled.button`
   text-align: left;
   text-transform: uppercase;
-  text-decoration: ${props => props.isSelected && 'underline'};
-  font-family: 'Perpetua';
-  font-size: ${props => props.isSelected ? '19px' : '20px'};
-  font-weight: ${props => props.isSelected ? 700 : 400};
+  text-decoration: ${(props) => props.isSelected && "underline"};
+  font-family: "Perpetua";
+  font-size: ${(props) => (props.isSelected ? "19px" : "20px")};
+  font-weight: ${(props) => (props.isSelected ? 700 : 400)};
   padding: 0 16px;
   display: flex;
   align-items: center;
   min-height: 100%;
-  background: ${props => props.isSelected && 'var(--color-grey-1)'};
-
+  background: ${(props) => props.isSelected && "var(--color-grey-1)"};
+  :hover {
+    cursor: pointer;
+  }
 
   span {
     margin-right: 5px;
@@ -64,14 +62,12 @@ const Tab = styled.button`
   }
 
   @media screen and (min-width: 1200px) {
-    font-size: ${props => props.isSelected ? '23px' : '24px'};
+    font-size: ${(props) => (props.isSelected ? "23px" : "24px")};
     padding: 0 21px;
-  } 
+  }
 
   @media screen and (min-width: 1440px) {
-    font-size: ${props => props.isSelected ? '27px' : '28px'};
+    font-size: ${(props) => (props.isSelected ? "27px" : "28px")};
     padding: 0 26px;
   }
-`
-
-
+`;

@@ -1,6 +1,8 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import CategoryPage from "../components/CategoryPage";
+import BeginCard from "../components/BeginCard";
+import StringNeedsAddOns from "../components/StringNeedsAddOns";
 
 const InstrumentCategories = (props) => {
   const data = useStaticQuery(graphql`
@@ -94,6 +96,8 @@ const InstrumentCategories = (props) => {
       }
       path={path}
       categories={categories}
+      infoCard={BeginCard}
+      addOns={StringNeedsAddOns}
     />
   );
 };
