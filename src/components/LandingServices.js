@@ -58,9 +58,7 @@ const LandingServices = (props) => {
             Wherever you are, be a New Orleanian! Bring the experience of our
             violin shop to your home!{" "}
           </p>
-          <Button disabled={true} as={Link}>
-            Shop Now
-          </Button>
+          <Button as={Link}>Shop Now</Button>
         </Card>
         <Card>
           <picture>
@@ -78,9 +76,7 @@ const LandingServices = (props) => {
             Optimal quality & terrific value to ensure that you or your child
             has an ideal playing experience!
           </p>
-          <Button disabled={true} as={Link}>
-            Rent Today
-          </Button>
+          <Button as={Link}>Rent Today</Button>
         </Card>
         <Card>
           <picture>
@@ -98,9 +94,7 @@ const LandingServices = (props) => {
             All restorations & repairs are performed by in-house Luthiers with
             over 30 years of experience.
           </RepairP>
-          <Button disabled={true} as={Link}>
-            Schedule a Service
-          </Button>
+          <Button as={Link}>Schedule a Service</Button>
         </Card>
       </Cards>
       <Hr />

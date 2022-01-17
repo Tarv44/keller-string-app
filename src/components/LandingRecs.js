@@ -69,7 +69,7 @@ const LandingRecs = (props) => {
             <h3>{r.title}</h3>
             <p>{r.desc}</p>
           </div>
-          <Button disabled={true}>Learn More</Button>
+          <Button>Learn More</Button>
         </Card>
       );
     }

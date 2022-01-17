@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Carousel from "./Carousel";
+import AddOnCard from "./AddOnCard";
 
 const Gallery = styled.div({});
 

@@ -23,12 +23,18 @@ const Card = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 25px 0;
+  padding: 25px;
   h2 {
     color: var(--color-primary);
     width: 215px;
+    margin-bottom: 9px;
   }
-  a {
+  p {
+    font-size: 16px;
+    line-height: 25px;
+    margin-bottom: 12px;
+  }
+  p > a {
     text-decoration: underline;
   }
   @media screen and (min-width: 481px) {

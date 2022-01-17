@@ -4,7 +4,6 @@ import CategoryCard from "./CategoryCard";
 import CatHeader from "./CategoryPageHeader";
 import Hr from "./styled/Hr";
 import Layout from "./Layout";
-import QuestionCard from "./QuestionCard";
 
 const CategoryPage = ({
   categories,

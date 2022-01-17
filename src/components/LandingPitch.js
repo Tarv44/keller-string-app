@@ -10,19 +10,6 @@ const LandingPitch = (props) => {
   const Card1 = (
     <Card>
       <Container1>
-        <CardH2>Hurricane Ida Updates</CardH2>
-        <p>
-          Due to Hurricane Ida, and the massive power outage, Keller Strings
-          will remain closed until further notice. Please watch our social media
-          & website for progress and information. Stay safe y’all.
-        </p>
-        <Btn as={GLink}>Learn More</Btn>
-      </Container1>
-    </Card>
-  );
-  const Card2 = (
-    <Card>
-      <Container1>
         <CardH2>
           Please Remember That As Of February <Year1>‘21</Year1>
           <Year2>'21...</Year2>
@@ -33,7 +20,7 @@ const LandingPitch = (props) => {
       </Container1>
     </Card>
   );
-  const cards = [Card1, Card2];
+  const cards = [Card1];
   return (
     <Pitch>
       <h2>Trust Us With Your String Needs</h2>
