@@ -42,9 +42,23 @@ const Card = styled.div`
   @media screen and (min-width: 625px) {
   }
   @media screen and (min-width: 768px) {
+    width: 643px;
+    padding: 25px 40px;
+    h2 {
+      width: 100%;
+    }
   }
   @media screen and (min-width: 1025px) {
   }
   @media screen and (min-width: 1200px) {
+    width: 1010px;
+    padding: 40px;
+    p {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+  }
+  @media screen and (min-width: 1440px) {
+    width: 1100px;
   }
 `;

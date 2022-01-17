@@ -12,6 +12,9 @@ const Button = styled.button`
   text-align: center;
   display: block;
   text-decoration: none;
+  a {
+    text-decoration: none;
+  }
   @media screen and (min-width: 481px) {
   }
   @media screen and (min-width: 768px) {
