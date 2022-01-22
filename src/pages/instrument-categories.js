@@ -1,7 +1,7 @@
 import React from "react";
 import CategoryPage from "../components/CategoryPage";
 import BeginCard from "../components/BeginCard";
-import StringNeedsAddOns from "../components/StringNeedsAddOns";
+import InstRoofAddOns from "../components/InstRoofAddOns";
 import { useInstrumentCatImages } from "../hooks/useInstrumentCatImages";
 
 const InstrumentCategories = () => {
@@ -24,7 +24,7 @@ const InstrumentCategories = () => {
       path={path}
       categories={categories}
       infoCard={BeginCard()}
-      addOns={StringNeedsAddOns}
+      addOns={InstRoofAddOns()}
     />
   );
 };

@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 export const GlobalStyle = createGlobalStyle`
@@ -80,11 +80,12 @@ export const GlobalStyle = createGlobalStyle`
     max-width: 100%;
   }
 
-  .slick-slider {
+ .slick-slider {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+    flex-direction: row;
+  } 
 
   .slick-slide[style="width: 0px;"] {
     width: calc(100vw - 163px) !important;
@@ -176,7 +177,4 @@ export const GlobalStyle = createGlobalStyle`
       width: 15px;
     }
   }
-`
-
-
-
+`;

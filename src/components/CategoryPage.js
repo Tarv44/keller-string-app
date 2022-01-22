@@ -16,20 +16,22 @@ const CategoryPage = ({
   const cats = categories.map((c, i) => <CategoryCard key={i} card={c} />);
   return (
     <Layout>
-      <Sections>
-        <CatHeader title={title} subtitle={subtitle} path={path} />
-        <Categories>{cats}</Categories>
-        <Hr style={{ marginBottom: 35 }} />
-        {infoCard}
-        <Hr style={{ marginBottom: 35 }} />
+      <div>
+        <CatContainer>
+          <CatHeader title={title} subtitle={subtitle} path={path} />
+          <Categories>{cats}</Categories>
+          <Hr style={{ marginBottom: 35 }} />
+          {infoCard}
+          <Hr style={{ marginBottom: 35 }} />
+        </CatContainer>
         {addOns}
-      </Sections>
+      </div>
     </Layout>
   );
 };
 export default CategoryPage;
 
-const Sections = styled.div`
+const CatContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;

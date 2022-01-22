@@ -19,8 +19,8 @@ export default InfoCard;
 const Card = styled.div`
   background: var(--color-grey-1);
   width: 355px;
-  margin-bottom: 35px;
   display: flex;
+  margin: 0 auto 35px;
   flex-direction: column;
   align-items: center;
   padding: 25px;

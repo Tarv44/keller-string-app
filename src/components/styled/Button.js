@@ -11,7 +11,7 @@ const Button = styled.button`
   padding: 6px 0;
   text-align: center;
   display: block;
-  text-decoration: none;
+  text-decoration: none !important;
   a {
     text-decoration: none;
   }
