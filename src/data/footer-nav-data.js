@@ -1,82 +1,82 @@
 const footerData = {
-  "About": [
+  About: [
     {
-      title: 'About Us',
-      path: ''
+      title: "About Us",
+      path: "/",
     },
     {
-      title: 'Reviews',
-      path: ''
+      title: "Reviews",
+      path: "/",
     },
     {
-      title: 'COVID-19',
-      path: ''
+      title: "COVID-19",
+      path: "/",
     },
     {
-      title: 'News',
-      path: ''
+      title: "News",
+      path: "/",
     },
     {
-      title: 'Contact Us',
-      path: ''
+      title: "Contact Us",
+      path: "/",
     },
   ],
-  "Services": [
+  Services: [
     {
-      title: 'Rentals',
-      path: ''
+      title: "Rentals",
+      path: "/",
     },
     {
-      title: 'Repairs',
-      path: ''
+      title: "Repairs",
+      path: "/",
     },
     {
-      title: 'Rehairing',
-      path: ''
+      title: "Rehairing",
+      path: "/",
     },
     {
-      title: 'Restoration',
-      path: ''
+      title: "Restoration",
+      path: "/",
     },
     {
-      title: 'Appraisals',
-      path: ''
+      title: "Appraisals",
+      path: "/",
     },
   ],
   "My Account": [
     {
-      title: 'Login',
-      path: ''
+      title: "Login",
+      path: "/",
     },
     {
-      title: 'My Cart',
-      path: ''
+      title: "My Cart",
+      path: "/",
     },
   ],
-  "Shop": [
+  Shop: [
     {
-      title: 'Online Store',
-      path: ''
+      title: "Online Store",
+      path: "/",
     },
   ],
-  "Resources": [
+  Resources: [
     {
-      title: 'Local Teachers Directory',
-      path: ''
+      title: "Local Teachers Directory",
+      path: "/",
     },
     {
-      title: 'Choosing Your 1st Instrument',
-      path: ''
+      title: "Choosing Your 1st Instrument",
+      path: "/",
     },
     {
-      title: 'Other Instrument Guides',
-      path: ''
+      title: "Other Instrument Guides",
+      path: "/",
     },
     {
-      title: 'More tips & tricks!',
-      path: ''
+      title: "More tips & tricks!",
+      path: "/",
     },
   ],
-}
+};
 
 export default footerData;

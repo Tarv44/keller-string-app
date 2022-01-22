@@ -1,11 +1,11 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Link } from 'gatsby';
+import React from "react";
+import styled from "styled-components";
+import { Link } from "gatsby";
 
-const FooterLink = ({path, title}) => {
+const FooterLink = ({ path, title }) => {
   return (
     <LinkLi>
-      <Link path={path}>{title}</Link>
+      <Link to={path}>{title}</Link>
     </LinkLi>
   );
 };
@@ -18,7 +18,8 @@ const LinkLi = styled.li`
   :last-child {
     margin-bottom: 15px;
   }
-  @media screen and (min-width: 481px) {}
+  @media screen and (min-width: 481px) {
+  }
   @media screen and (min-width: 768px) {
     margin-bottom: 0;
     line-height: 22px;
@@ -26,6 +27,8 @@ const LinkLi = styled.li`
       margin-bottom: 0;
     }
   }
-  @media screen and (min-width: 1025px) {}
-  @media screen and (min-width: 1200px) {}
-`
+  @media screen and (min-width: 1025px) {
+  }
+  @media screen and (min-width: 1200px) {
+  }
+`;

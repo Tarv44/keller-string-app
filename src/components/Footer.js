@@ -8,7 +8,7 @@ import SignupInput from "./SignupInput";
 
 const Footer = (props) => {
   const dropdowns = Object.entries(footerData).map((f, i) => (
-    <FooterDropdown title={f[0]} links={f[1]} />
+    <FooterDropdown key={`footer-dropdown-${i}`} title={f[0]} links={f[1]} />
   ));
   return (
     <Ftr>
