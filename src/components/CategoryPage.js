@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import CategoryCard from "./CategoryCard";
-import CatHeader from "./CategoryPageHeader";
+import PageHeader from "./PageHeader";
 import Hr from "./styled/Hr";
 import Layout from "./Layout";
+import { Container } from "./styled/Container";
 
 const CategoryPage = ({
   categories,
@@ -17,35 +18,24 @@ const CategoryPage = ({
   return (
     <Layout>
       <div>
-        <CatContainer>
-          <CatHeader title={title} subtitle={subtitle} path={path} />
+        <Container>
+          <PageHeader
+            title={title}
+            subtitle={subtitle}
+            path={path}
+            info={true}
+          />
           <Categories>{cats}</Categories>
           <Hr style={{ marginBottom: 35 }} />
           {infoCard}
           <Hr style={{ marginBottom: 35 }} />
-        </CatContainer>
+        </Container>
         {addOns}
       </div>
     </Layout>
   );
 };
 export default CategoryPage;
-
-const CatContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  @media screen and (min-width: 481px) {
-  }
-  @media screen and (min-width: 625px) {
-  }
-  @media screen and (min-width: 768px) {
-  }
-  @media screen and (min-width: 1025px) {
-  }
-  @media screen and (min-width: 1200px) {
-  }
-`;
 
 const Categories = styled.div`
   display: flex;

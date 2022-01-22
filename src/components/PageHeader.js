@@ -1,40 +1,8 @@
-import { Link } from "gatsby";
 import React from "react";
-import Path from "./styled/Path";
-import InfoSVG from "../images/info-icon.svg";
 import styled from "styled-components";
-
-const CatHeader = ({ title, subtitle, path }) => {
-  return (
-    <Header>
-      <PathHeader>
-        <Path linkData={path} />
-        <Ribbon>
-          Learn about our <Link to="/">financing options</Link>!
-        </Ribbon>
-      </PathHeader>
-      <TitleContainer>
-        <TitleInfo>
-          <h1>{title}</h1>
-          <DesktopInfo>
-            <p>
-              Are you a <Link to="/">beginner</Link>?
-            </p>
-            <img width={30} height={30} src={InfoSVG} alt={"Info icon"} />
-          </DesktopInfo>
-        </TitleInfo>
-        <p>{subtitle}</p>
-      </TitleContainer>
-      <MobileInfo>
-        <p>
-          Are you a <Link to="/">beginner</Link>?
-        </p>
-        <img width={30} height={30} src={InfoSVG} alt={"Info icon"} />
-      </MobileInfo>
-    </Header>
-  );
-};
-export default CatHeader;
+import BeginnerInfo from "./BeginnerInfo";
+import Path from "./styled/Path";
+import FinancingRibbon from "./FinancingRibbon";
 
 const Header = styled.header`
   display: flex;
@@ -73,40 +41,6 @@ const PathHeader = styled.div`
   }
 `;
 
-const Ribbon = styled.p`
-  font-size: 14px !important;
-  display: block;
-  width: 300px;
-  right: 0;
-  position: relative;
-  background: var(--color-acc-olive);
-  text-align: center;
-  padding: 4px 0 4px 30px;
-  margin: 35px 0;
-  color: #fff;
-
-  a {
-    color: #fff;
-    text-decoration: underline;
-  }
-
-  :before {
-    content: "";
-    position: absolute;
-    display: block;
-    border-color: var(--color-acc-olive);
-    border-style: solid;
-    border-width: 15px 0 15px 15px;
-    z-index: 1;
-    left: 0;
-    bottom: 0;
-    border-left-color: #ffffff;
-  }
-
-  @media screen and (min-width: 768px) {
-    margin: 0;
-  }
-`;
 const TitleContainer = styled.div`
   text-align: left;
   width: 310px;
@@ -188,3 +122,31 @@ const DesktopInfo = styled(Info)`
     align-self: center;
   }
 `;
+
+const PageHeader = ({ path, title, info, subtitle }) => {
+  return (
+    <Header>
+      <PathHeader>
+        <Path pathData={path} />
+        <FinancingRibbon />
+      </PathHeader>
+      <TitleContainer>
+        <TitleInfo>
+          <h1>{title}</h1>
+          {info && (
+            <DesktopInfo>
+              <BeginnerInfo />
+            </DesktopInfo>
+          )}
+        </TitleInfo>
+        {subtitle && <p>{subtitle}</p>}
+      </TitleContainer>
+      {info && (
+        <MobileInfo>
+          <BeginnerInfo />
+        </MobileInfo>
+      )}
+    </Header>
+  );
+};
+export default PageHeader;

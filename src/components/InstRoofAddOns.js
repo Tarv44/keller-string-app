@@ -1,9 +1,9 @@
 import React from "react";
 import AddOnsGallery from "./AddOnsGallery";
-import { useInstrumentCatImages } from "../hooks/useInstrumentCatImages";
+import { useInstrumentCategories } from "../hooks/useInstrumentCategories";
 
 const InstRoofAddOns = (props) => {
-  const { images } = useInstrumentCatImages();
+  const { images } = useInstrumentCategories();
   const linkLabel = "Shop Accessories";
   const cardData = [
     {

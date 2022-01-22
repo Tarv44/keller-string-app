@@ -1,7 +1,7 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
-export const useInstrumentCatImages = () => {
+export const useInstrumentCategories = () => {
   const data = useStaticQuery(graphql`
     query MyQuery {
       contentfulInstrumentCategories {

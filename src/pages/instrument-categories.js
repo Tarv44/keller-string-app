@@ -2,10 +2,10 @@ import React from "react";
 import CategoryPage from "../components/CategoryPage";
 import BeginCard from "../components/BeginCard";
 import InstRoofAddOns from "../components/InstRoofAddOns";
-import { useInstrumentCatImages } from "../hooks/useInstrumentCatImages";
+import { useInstrumentCategories } from "../hooks/useInstrumentCategories";
 
 const InstrumentCategories = () => {
-  const { categories } = useInstrumentCatImages();
+  const { categories } = useInstrumentCategories();
   const path = [
     {
       path: "/shop-categories",
