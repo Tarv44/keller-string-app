@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby";
 
 export const useInstrumentCategories = () => {
   const data = useStaticQuery(graphql`
-    query MyQuery {
+    query InstrumentCategories {
       contentfulInstrumentCategories {
         images {
           fluid {

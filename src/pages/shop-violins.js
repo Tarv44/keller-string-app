@@ -1,8 +1,9 @@
 import React from "react";
-// import styled from "styled-components";
 import ShopTemplate from "../components/ShopTemplate";
+import { useGetViolins } from "../hooks/useGetViolins";
 
 const ShopViolins = (props) => {
+  const violins = useGetViolins();
   return (
     <ShopTemplate
       title="Violins"
